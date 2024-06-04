@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :garden_steps, only: [:show, :update]
 
+
   get  "gardens/:id", to: "gardens#packagechoice", as: "packagechoice"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

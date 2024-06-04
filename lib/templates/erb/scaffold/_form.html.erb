@@ -13,3 +13,10 @@
     <%%= f.button :submit %>
   </div>
 <%% end %>
+
+<%= simple_form_for(garden) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :rating %>
+  <%= f.submit %>
+<% end %>
