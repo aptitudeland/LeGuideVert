@@ -1,14 +1,14 @@
 # db/seeds.rb
 
 # Clear existing data
-# User.destroy_all
+GardenStep.destroy_all
+Task.destroy_all
+Step.destroy_all
 Garden.destroy_all
 Package.destroy_all
-Step.destroy_all
-Task.destroy_all
-GardenStep.destroy_all
+User.destroy_all
 
-Create an admin user
+# Create an admin user
 admin = User.create!(
   id: 1,
   email: 'admin@site.com',
@@ -88,13 +88,12 @@ Task.create!(
   * 10 plants d'oignons jaunes ou rouges
   * 1 sachet de graines de salades comprises dans celles qui aiment le soleil et supportent la chaleur : laitue romaine, laitue pommée, roquette ",
   step: step1_1
-
+)
 Task.create!(
   order: 3,
   name: "Tâche 3 : Verser le terreau dans le bac",
   description: "Verser le terreau dans le bac et tasser avec votre pied au fur et à mesure",
   step: step1_1
-)
 )
 
 Task.create!(
@@ -358,16 +357,4 @@ GardenStep.create!(
   garden: garden2,
   step: step2_3,
   status: "terminé"
-)
-
-GardenStep.create!(
-  garden: garden3,
-  step: step1_4,
-  status: "non commencé"
-)
-
-GardenStep.create!(
-  garden: garden3,
-  step: step2_4,
-  status: "en cours"
 )
