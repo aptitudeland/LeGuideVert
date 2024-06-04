@@ -24,3 +24,9 @@
     </p>
   </div>
 <% end %>
+
+
+<%= link_to "Delete",
+  garden_path(@garden),
+  data: {turbo_method: :delete, turbo_confirm: "Are you really sure?"}
+%>
