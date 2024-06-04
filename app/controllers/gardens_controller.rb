@@ -3,7 +3,10 @@ class GardensController < ApplicationController
     @gardens = Garden.all
   end
 
-
+  def show
+    @garden = Garden.find(params[:id])
+    @garden_steps = @garden.garden_steps.includes(:step)
+  end
 
   # private
 
