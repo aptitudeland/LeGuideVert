@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :garden_steps, only: [:show, :update]
 
   resources :gardens
+  resources :steps, only: [:show]
 
   get "gardens/:id", to: "gardens#packagechoice", as: "packagechoice"
   get "restaurants", to: "restaurants#index"
