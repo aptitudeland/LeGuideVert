@@ -15,7 +15,7 @@
   <div class="step">
     <p>
       <strong> <%= garden_step.step.order %> -</strong>
-      <%= link_to garden_step.step.name, step_path(garden_step.step) %> :
+      <%= link_to garden_step.step.name, garden_step_path(garden_step) %> :
       <%= garden_step.step.description %>
     </p>
     <p>
