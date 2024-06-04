@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :garden_steps, only: [:create]
   end
 
-  resources :garden_steps, only: [:show, :update]
+  resources :garden_steps, only: [:show, :edit, :update]
 
   resources :gardens
   resources :steps, only: [:show]
