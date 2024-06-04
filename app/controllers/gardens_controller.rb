@@ -11,7 +11,7 @@ class GardensController < ApplicationController
   end
 
   def index
-    @gardens = Garden.all
+    @mygardens = Garden.all.where(user: current_user)
   end
 
   def show
