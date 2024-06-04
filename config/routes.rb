@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :garden_steps, only: [:show, :update]
 
+
   resources :gardens
   resources :steps, only: [:show]
 

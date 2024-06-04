@@ -19,6 +19,8 @@ GardenStep.destroy_all
 # Create gardens for the admin user
 garden1 = Garden.create!(
   name: "Jardin 1",
+  size: "jardinière",
+  exposition: "Pas de soleil",
   size: "petit",
   exposition: "plein soleil",
   address: "123 Rue Principale, N'importeville, France",
@@ -27,6 +29,8 @@ garden1 = Garden.create!(
 
 garden2 = Garden.create!(
   name: "Jardin 2",
+  size: "potager partagé",
+  exposition: "Soleil le matin",
   size: "moyen",
   exposition: "mi-ombre",
   address: "456 Rue du Chêne, Quelquesville, France",
@@ -35,6 +39,8 @@ garden2 = Garden.create!(
 
 garden3 = Garden.create!(
   name: "Jardin 3",
+  size: "bac",
+  exposition: "Soleil en après midi",
   size: "grand",
   exposition: "ombre",
   address: "789 Rue des Pins, Votreville, France",
