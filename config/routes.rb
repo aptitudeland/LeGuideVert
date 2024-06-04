@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
+
+  resources :gardens do
+    resources :garden_steps, only: [:create]
+  end
+
+  resources :garden_steps, only: [:show, :update]
+
+  get  "gardens/:id", to: "gardens#packagechoice", as: "packagechoice"
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
