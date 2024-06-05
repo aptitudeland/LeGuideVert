@@ -76,7 +76,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_05_093041) do
     t.integer "order"
     t.string "name"
     t.text "description"
-    t.string "image_path"
+    t.string "image_p
     t.bigint "package_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
