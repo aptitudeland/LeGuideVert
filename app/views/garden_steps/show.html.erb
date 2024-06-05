@@ -18,7 +18,7 @@
 <div>
  <%= simple_form_for(@garden_step) do |f| %>
     <div class="d-none">
-    <%= f.input :status, input_html: {value: "Non démarré"}%>
+    <%= f.input :status, input_html: {value: "Etape non démarré."}%>
   </div>
       <%= button_tag(type: 'submit', class: "btn btn-light border") do %>
         <i class="icon-ok icon-white"></i> Non démarré
@@ -27,7 +27,7 @@
 
   <%= simple_form_for(@garden_step) do |f| %>
     <div class="d-none">
-    <%= f.input :status, input_html: {value: "Etape en cours"}%>
+    <%= f.input :status, input_html: {value: "...étape en cours"}%>
   </div>
       <%= button_tag(type: 'submit', class: "btn btn-warning border") do %>
         <i class="icon-ok icon-white"></i> En cours
@@ -36,7 +36,7 @@
 
   <%= simple_form_for(@garden_step) do |f| %>
     <div class="d-none">
-      <%= f.input :status, input_html: {value: "Etape terminée"}%>
+      <%= f.input :status, input_html: {value: "Etape terminée !"}%>
     </div>
       <%= button_tag(type: 'submit', class: "btn btn-success border") do %>
         <i class="icon-ok icon-white"></i> Terminer

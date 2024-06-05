@@ -1,6 +1,6 @@
 # db/seeds.rb
 
-# Clear existing data
+puts "Clearing existing data"
 GardenStep.destroy_all
 Task.destroy_all
 Step.destroy_all
@@ -8,7 +8,7 @@ Garden.destroy_all
 Package.destroy_all
 User.destroy_all
 
-# Create an admin user
+puts "Creating an admin user"
 admin = User.create!(
   id: 1,
   email: 'admin@site.com',
@@ -16,7 +16,7 @@ admin = User.create!(
   password_confirmation: '000000'
 )
 
-# Create gardens for the admin user
+puts "Creating gardens for the admin user"
 garden1 = Garden.create!(
   name: "Le bac de la courette",
   size: "Bac potager",
@@ -41,7 +41,7 @@ garden3 = Garden.create!(
   user_id: 1
 )
 
-# Create packages with steps and tasks
+puts "Creating packages with steps and tasks"
 package1 = Package.create!(
   name: "Kit Kebab",
   category: "Légumes",
@@ -51,7 +51,7 @@ package1 = Package.create!(
 
 step1_1 = Step.create!(
   order: 1,
-  name: "Étape 1 : Préparer ma terre et acheter le nécessaire",
+  name: "Préparer ma terre et acheter le nécessaire",
   description: "Pour un carré potager au sol, la préparation du terrain
   est assez succincte. Suivez les 2 tâches de l'étape.",
   package: package1
@@ -59,7 +59,7 @@ step1_1 = Step.create!(
 
 step1_2 = Step.create!(
   order: 2,
-  name: "Étape 2 : Plantons et semons !",
+  name: "Plantons et semons !",
   description: "Cette étape importante vous explique comment planter
   tomates et oignons et semer les salades",
   package: package1
@@ -67,7 +67,7 @@ step1_2 = Step.create!(
 
 step1_3 = Step.create!(
   order: 3,
-  name: "Étape 3 : Surveillance avant récolte",
+  name: "Surveillance avant récolte",
   description: "Cette étape vous donne les astuces de la surveillance des légumes,
   l'arrosage, et les temps avant les récoltes",
   package: package1
@@ -75,14 +75,14 @@ step1_3 = Step.create!(
 
 Task.create!(
   order: 1,
-  name: "Tâche 1 : Aller chercher du terreau",
+  name: "Aller chercher du terreau",
   description: "Acheter du terreau universel selon la taille approximatif de votre bac :
   Allez sur ce site partenaire et entrez vos dimensions de bac :https://www.lovethegarden.com/fr-fr/calculateur/terreau",
   step: step1_1
 )
 Task.create!(
   order: 2,
-  name: "Tâche 2 : Acheter le nécessaire pour les légumes",
+  name: "Acheter le nécessaire pour les légumes",
   description: "Rendez-vous en ligne ou dans un magasin de jardinage de votre choix
   pour acheter :
   * 4 plants de tomates avec les variétés suivantes Roma, Montfavet, Flavio (vous pouvez mixer ou acheter une seule variété)
@@ -92,14 +92,14 @@ Task.create!(
 )
 Task.create!(
   order: 3,
-  name: "Tâche 3 : Verser le terreau dans le bac",
+  name: "Verser le terreau dans le bac",
   description: "Verser le terreau dans le bac et tasser avec votre pied au fur et à mesure",
   step: step1_1
 )
 
 Task.create!(
   order: 1,
-  name: "Tâche 1 : Semons les salades ! ",
+  name: "Semons les salades ! ",
   description: "Sur une ligne de la largeur de votre bac, creusez avec votre doigt un sillon dans la terre
   d'environ 1cm. Prenez un tas de graines du sachet dans votre main gauche et en faisant une pince pouce-index, prenez au fur
   et à mesure des graines et placez les dans le sillon en essayant de ne pas faire de tas. Puis, refermez le sillon en remettant la terre sur
@@ -109,7 +109,7 @@ Task.create!(
 
 Task.create!(
   order: 2,
-  name: "Tâche 2 : Plantons les tomates ! ",
+  name: "Plantons les tomates ! ",
   description: "Faites autant de trous que de tomates achetées. Vos tomates ont besoin d'être plantées dans un trou qui
   fait 2 fois leur volume de pot. Chaque trou est écarté des autres par 30cms.
   Une fois les trous faits, enlevez chaque tomate de son pot, placez la dans un trou et
@@ -121,7 +121,7 @@ Task.create!(
 
 Task.create!(
   order: 3,
-  name: "Tâche 3 : Plantons les oignons ! ",
+  name: "Plantons les oignons ! ",
   description: "Faites autant de trous que d'oignons achetés. Vos oignons ont besoin d'être plantés dans un trou qui
   fait la taille de leur pot. Chaque trou est écarté des autres par 10cms.
   Une fois les trous faits, enlevez chaque oignon de son pot, placez le dans un trou et
@@ -132,7 +132,7 @@ Task.create!(
 
 Task.create!(
   order: 1,
-  name: "Tâche 1 : Surveillance",
+  name: "Surveillance",
   description: "Durant la vie de vos légumes et fruits, il vous faudra surveiller leur évolution au moins 3 fois par semaine. Les oignons nécessitent
   très peu de soin, ils sont autosuffisants. Sur les tomates, il vous faudra enlever les gourmands qui poussent entre le tronc et les branches https://jardin-potager-bio.fr/couper-gourmands-tomates
   Les salades nécessitent surtout de la surveillance pour ne pas être mangé dès leur premier stade par les limaces ou les escargots. Le plus efficace demeure de chasser les gastéropodes à la tombée de
@@ -142,7 +142,7 @@ Task.create!(
 
 Task.create!(
   order: 2,
-  name: "Tâche 2 : Arrosage",
+  name: "Arrosage",
   description: "*Salades : votre salade aura besoin d'un arrosage régulier que ce soit par vous ou par la pluie, le sol doit être humide au moins 1 jour sur 2.
   *Tomates : La tomate a besoin d'être arrosé sur son pied et non sur ses feuilles. vous pouvez partir sur un arrosage de un verre d'eau par pied tous les 3 jours
   sauf si le sol est humide.
@@ -154,7 +154,7 @@ Task.create!(
 
 Task.create!(
   order: 3,
-  name: "Tâche 3 : Prévoir temps avant récolte",
+  name: "Prévoir temps avant récolte",
   description: "Oignons : A recolter environ 4 mois après votre plantation. Ne vous précipitez pas trop pour récolter vos oignons. Pas mûrs à point, ils ne se conserveront pas.
   Attendez que les fanes soient bien sèches et qu’elles aient pratiquement disparu.
   *Tomates : vos tomates vont être produites au fur et à mesure environ 3 mois après votre plantation. Vos tomates peuvent produire jusqu'à l'automne si les températures le permettent.
@@ -194,7 +194,7 @@ package2 = Package.create!(
 
 step2_1 = Step.create!(
   order: 1,
-  name: "Étape 1 : Préparer ma terre et acheter le nécessaire",
+  name: "Préparer ma terre et acheter le nécessaire",
   description: "Pour une jardinière, la préparation du terrain
   est assez succincte. Suivez les 2 tâches de l'étape.",
   package: package2
@@ -202,7 +202,7 @@ step2_1 = Step.create!(
 
 step2_2 = Step.create!(
   order: 2,
-  name: "Étape 2 : Plantons!",
+  name: "Plantons!",
   description: "Cette étape importante vous explique comment planter
   vos fraisiers et votre framboisier",
   package: package2
@@ -210,7 +210,7 @@ step2_2 = Step.create!(
 
 step2_3 = Step.create!(
   order: 3,
-  name: "Étape 3 : Surveillance avant récolte",
+  name: "ÉSurveillance avant récolte",
   description: "Cette étape vous donne les astuces de la surveillance des fruits,
   l'arrosage, et les temps avant récolte",
   package: package2
@@ -225,7 +225,7 @@ step2_3 = Step.create!(
 
 Task.create!(
   order: 1,
-  name: "Tâche 1 : Aller chercher du terreau",
+  name: "Aller chercher du terreau",
   description: "Acheter du terreau universel selon la taille approximatif de votre bac :
   Allez sur ce site partenaire et entrez vos dimensions de bac :https://www.lovethegarden.com/fr-fr/calculateur/terreau",
   step: step2_1
@@ -233,7 +233,7 @@ Task.create!(
 
 Task.create!(
   order: 2,
-  name: "Tâche 2 : Acheter le nécessaire",
+  name: "Acheter le nécessaire",
   description: "Rendez-vous en ligne ou dans un magasin de jardinage de votre choix
   pour acheter :
   * 4 plants de fraisiers avec les variétés suivantes mara des bois, pink panda, ou Alexandria, plus adaptés à l'ombre (vous pouvez mixer ou acheter une seule variété)
@@ -243,7 +243,7 @@ Task.create!(
 
 Task.create!(
   order: 3,
-  name: "Tâche 3 : Verser le terreau dans la jardinière",
+  name: "Verser le terreau dans la jardinière",
   description: "Verser le terreau dans la jardinière et tasser avec votre main. Laissez un côté de la
   jardinière remplie seulement à la moitié sur 30 cm environ",
   step: step2_1
@@ -251,7 +251,7 @@ Task.create!(
 
 Task.create!(
   order: 1,
-  name: "Tâche 1 : Plantons le framboisier ! ",
+  name: "Plantons le framboisier ! ",
   description: "Du côté où vous avez à moitié rempli la jardinière, placez votre framboisier après l'avoir enlevé de
   son pot. Mettez le terreau nécessaire pour récouvrir toutes les racines. Arrosez avec 1 grand verre d'eau. ",
   step: step2_2
@@ -259,7 +259,7 @@ Task.create!(
 
 Task.create!(
   order: 2,
-  name: "Tâche 2 : Plantons les fraisiers",
+  name: "Plantons les fraisiers",
   description: "Faites autant de trous que de fraisiers achetés.
   Vos fraisiers ont besoin d'être plantés dans un trou qui
   fait la taille de leur pot. Chaque trou est écarté des autres par 10cms.
@@ -277,7 +277,7 @@ Task.create!(
 
 Task.create!(
   order: 1,
-  name: "Tâche 1 : Surveillance",
+  name: "Surveillance",
   description: "Durant la vie de vos fruits,
   il vous faudra surveiller leur évolution au moins 2 fois par semaine.
   Les framboisiers et fraisiers demandent peu d'entretien et ont peu de prédateurs
@@ -287,7 +287,7 @@ Task.create!(
 
 Task.create!(
   order: 2,
-  name: "Tâche 2 : Arrosage",
+  name: "Arrosage",
   description: "*Fraisiers : vos fraisiers auront besoin d'un arrosage régulier que ce soit par vous ou par la pluie, le terreau doit être humide au moins 1 jour sur 3.
   *Framboisier : votre framboisier aura besoin d'un arrosage régulier que ce soit par vous ou par la pluie, le terreau doit être humide au moins 1 jour sur 4.",
   step: step2_3
@@ -295,7 +295,7 @@ Task.create!(
 
 Task.create!(
   order: 3,
-  name: "Tâche 3 : Prévoir temps avant récolte",
+  name: "Prévoir temps avant récolte",
   description: "*Fraisiers : vos fraises vont être produites au fur et à mesure environ 1 mois après plantation.
   *Framboisier : votre framboisier ne va peut-être pas produire la première année car il peut être perturbé par la plantation
   et ne produire qu'à partir de la deuxième année durant laquelle il pourra vous donner des
@@ -323,7 +323,6 @@ Task.create!(
 #   description: "Description pour la tâche 2.4.3",
 #   step: step2_4
 # )
-
 
 package3 = Package.create!(
   name: "Vous reprendrez bien de la ratatouille ?",
@@ -367,40 +366,39 @@ package8 = Package.create!(
   size: "Jardinière",
 )
 
-
-# Create garden steps
+puts "Creating garden steps"
 GardenStep.create!(
   garden: garden1,
   step: step1_1,
-  status: "terminé"
+  status: "Etape non démarré."
 )
 
 GardenStep.create!(
   garden: garden1,
   step: step1_2,
-  status: "en cours"
+  status: "Etape non démarré."
 )
 
 GardenStep.create!(
   garden: garden1,
   step: step1_3,
-  status: "terminé"
+  status: "Etape non démarré."
 )
 
 GardenStep.create!(
   garden: garden2,
   step: step2_1,
-  status: "non commencé"
+  status: "Etape non démarré."
 )
 
 GardenStep.create!(
   garden: garden2,
   step: step2_2,
-  status: "en cours"
+  status: "Etape non démarré."
 )
 
 GardenStep.create!(
   garden: garden2,
   step: step2_3,
-  status: "non commencé"
+  status: "Etape non démarré."
 )

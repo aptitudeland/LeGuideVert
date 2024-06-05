@@ -23,13 +23,3 @@ class GardenStepsController < ApplicationController
     params.require(:garden_step).permit(:status)
   end
 end
-
-# def update_status
-#   @reservation = Reservation.find(params[:id])
-#   if @reservation.update(status: params[:reservation][:status])
-#     flash[:notice] = "Le statut de la réservation a bien été mis à jour à : #{params[:reservation][:status]} ."
-#   else
-#     flash[:alert] = 'Une erreur est survenue lors de la mise à jour du statut.'
-#   end
-#   redirect_back(fallback_location: @reservation.legend)
-# end
