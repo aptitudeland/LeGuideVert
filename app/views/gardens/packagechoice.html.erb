@@ -4,11 +4,15 @@
   <div class="package-choice-container">
     <p>Pour <%=@garden.name%> nous vous proposons 4 kits </p>
       <div class="package-choice-iteration-container">
+      <%# form_for %>
         <% @packages.each do |package|  %>
-          <div class= "cards-legend-container">
+        <%# radiobutton %>
+          <div class= "package-choice-iteration-card">
             <%= package.name %> <br>
             <%= package.description %>
           </div>
-      <% end %>
+        <%# /radiobutton %>
+        <% end %>
+      <%# /form_for %>
       </div>
   </div>
