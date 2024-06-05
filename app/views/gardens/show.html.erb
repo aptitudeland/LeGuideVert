@@ -1,27 +1,26 @@
-<%= link_to 'Retour', gardens_path %>
-
-<h2><%= @garden.name %></h2>
+<%= link_to 'Retour', gardens_path %> <br>
+<h2>
+  <div class="delete-button">
+  <%= link_to garden_path(@garden), data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr?"} do%>
+  <i class="fa fa-trash" aria-hidden="true"></i>
+  <% end %>
+</div>
+<%= @garden.name %>
+</h2>
 <p>
   <%= @garden.address %> <br>
   taille: <%= @garden.size %> <br>
   exposition: <%= @garden.exposition %> <br>
 </p>
-<h3> Étape :</h3>
-<br>
+<h3> Étapes :</h3>
 <% @garden_steps.each do |garden_step| %>
   <div class="step">
     <p>
       <strong><%= garden_step.step.order %> -</strong>
       <%= link_to garden_step.step.name, garden_step_path(garden_step) %> <br>
       <%= garden_step.step.description %> <br>
-      <strong>Statut :</strong>
-      <%= garden_step.status %>
+      <strong><%= garden_step.status %></strong>
+
     </p>
   </div>
 <% end %>
-
-
-<%= link_to "Delete",
-  garden_path(@garden),
-  data: {turbo_method: :delete, turbo_confirm: "Are you really sure?"}
-%>

@@ -13,7 +13,6 @@ class GardenStepsController < ApplicationController
     redirect_to garden_path(@garden_step.garden)
   end
 
-
   private
 
   def set_garden_step

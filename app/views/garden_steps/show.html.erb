@@ -16,18 +16,18 @@
 
 
 <div>
-  <%= simple_form_for(@garden_step) do |f| %>
+ <%= simple_form_for(@garden_step) do |f| %>
     <div class="d-none">
-      <%= f.input :status, input_html: {value: "En attente"}%>
-    </div>
-    <%= button_tag(type: 'submit', class: " btn btn-light border") do %>
-      <i class="icon-ok icon-white"></i> En attente
-    <% end %>
+    <%= f.input :status, input_html: {value: "Non démarré"}%>
+  </div>
+      <%= button_tag(type: 'submit', class: "btn btn-light border") do %>
+        <i class="icon-ok icon-white"></i> Non démarré
+      <% end %>
   <% end %>
 
   <%= simple_form_for(@garden_step) do |f| %>
     <div class="d-none">
-    <%= f.input :status, input_html: {value: "En cours"}%>
+    <%= f.input :status, input_html: {value: "Etape en cours"}%>
   </div>
       <%= button_tag(type: 'submit', class: "btn btn-warning border") do %>
         <i class="icon-ok icon-white"></i> En cours
@@ -36,10 +36,10 @@
 
   <%= simple_form_for(@garden_step) do |f| %>
     <div class="d-none">
-      <%= f.input :status, input_html: {value: "Terminé"}%>
+      <%= f.input :status, input_html: {value: "Etape terminée"}%>
     </div>
       <%= button_tag(type: 'submit', class: "btn btn-success border") do %>
-        <i class="icon-ok icon-white"></i> Terminé
+        <i class="icon-ok icon-white"></i> Terminer
       <% end %>
     <% end %>
 </div>
