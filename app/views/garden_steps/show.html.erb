@@ -1,5 +1,5 @@
 <div>
-<h1>1. <%= @step.name %></h1>
+<h1><%= @step.order %> - <%= @step.name %></h1>
 </div>
 
 <div>
@@ -11,5 +11,16 @@
 </div>
 
 <div>
-<%= link_to "Retour", garden_path(@garden) %>
+  <%= link_to "Retour", garden_path(@garden) %>
+</div>
+
+<div>
+<%= simple_form_for(@garden_step) do |f| %>
+<div class="d-none">
+ <%= f.input :status, input_html: {value: "terminé"}%>
+ </div>
+  <%= button_tag(type: 'submit', class: "b") do %>
+    <i class="icon-ok icon-white"></i> Fini
+  <% end %>
+ <% end %>
 </div>
