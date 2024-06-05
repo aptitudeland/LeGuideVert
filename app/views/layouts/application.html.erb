@@ -11,9 +11,11 @@
     <%= javascript_importmap_tags %>
   </head>
   <div class="main-container">
-    <body><%= render "shared/navbar" %>
-    <%= render "shared/flashes" %>
-
+    <body>
+      <% unless action_name == 'home' %>
+        <%= render "shared/navbar" %>
+      <% end %>
+      <%= render "shared/flashes" %>
       <%= yield %>
     </body>
   </div>
