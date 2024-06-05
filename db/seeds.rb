@@ -18,17 +18,17 @@ admin = User.create!(
 
 # Create gardens for the admin user
 garden1 = Garden.create!(
-  name: "Mon magnifique balcon",
-  size: "Jardinière",
-  exposition: "ensoleillé ou mi-ensoleillé",
+  name: "Le bac de la courette",
+  size: "Bac potager",
+  exposition: "Soleil le midi",
   address: "43, boulevard Stalingrad, Nantes, France",
   user_id: 1
 )
 
 garden2 = Garden.create!(
-  name: "Le bac de la courette",
-  size: "Bac",
-  exposition: "mi-ombre ou ombre",
+  name: "Mon magnifique balcon",
+  size: "Jardinière",
+  exposition: "Pas de soleil",
   address: "43, boulevard Stalingrad, Nantes, France",
   user_id: 1
 )
@@ -36,7 +36,7 @@ garden2 = Garden.create!(
 garden3 = Garden.create!(
   name: "Le potager partagé",
   size: "potager partagé",
-  exposition: "mi-ombre ou ombre",
+  exposition: "Soleil le matin",
   address: "4, rue de la Moutonnerie, Nantes, France",
   user_id: 1
 )
@@ -46,6 +46,7 @@ package1 = Package.create!(
   name: "Kit Kebab",
   category: "Légumes",
   description: "Ce kit vous permettra de cuisiner d'excellents kebabs maison : tomates, oignons, salade",
+  size: "Bac potager",
 )
 
 step1_1 = Step.create!(
@@ -188,6 +189,7 @@ package2 = Package.create!(
   name: "Confiture fraise-framboise",
   category: "Fruits",
   description: "Ce kit vous permettra de cuisiner une confiture maison fruits rouges !",
+  size: "Jardinière",
 )
 
 step2_1 = Step.create!(
@@ -322,11 +324,55 @@ Task.create!(
 #   step: step2_4
 # )
 
+
+package3 = Package.create!(
+  name: "Vous reprendrez bien de la ratatouille ?",
+  category: "Mix",
+  description: "Ce kit vous permettra de cuisiner une ratatouille provençale !",
+  size: "Bac potager",
+  )
+
+package4 = Package.create!(
+  name: "Tartofraiz & co",
+  category: "Fruits",
+  description: "Ce kit vous permettra de faire de magnifiques tartes aux fruits !",
+  size: "Bac potager",
+  )
+
+package5 = Package.create!(
+  name: "Tisanes à gogo !",
+  category: "Aromatiques",
+  description: "Ce kit vous permettra d'aromatiser votre cuisine et préparer de merveilleuses tisanes !",
+  size: "Bac potager",
+  )
+
+package6 = Package.create!(
+  name: "Et si on pédalait dans la choucroute ?",
+  category: "Légumes",
+  description: "Ce kit vous permettra de cuisiner une petite choucroute alsacienne !",
+  size: "Jardinière",
+)
+
+package7 = Package.create!(
+  name: "Vous reprendrez bien de la soupe ?",
+  category: "Mix",
+  description: "Ce kit vous permettra de cuisiner une petite soupe !",
+  size: "Jardinière",
+)
+
+package8 = Package.create!(
+  name: "Tisanes relaxantes en préparation",
+  category: "Aromatiques",
+  description: "Ce kit vous permettra de créer des tisanes maison",
+  size: "Jardinière",
+)
+
+
 # Create garden steps
 GardenStep.create!(
   garden: garden1,
   step: step1_1,
-  status: "non commencé"
+  status: "terminé"
 )
 
 GardenStep.create!(
@@ -356,5 +402,5 @@ GardenStep.create!(
 GardenStep.create!(
   garden: garden2,
   step: step2_3,
-  status: "terminé"
+  status: "non commencé"
 )
