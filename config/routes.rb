@@ -12,8 +12,7 @@ Rails.application.routes.draw do
   resources :gardens
   resources :steps, only: [:show]
 
-  get "gardens/:id", to: "gardens#packagechoice", as: "packagechoice"
-  get "restaurants", to: "restaurants#index"
+  get "gardens/:id/packages", to: "gardens#packagechoice", as: "packagechoice"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

@@ -7,7 +7,7 @@ class GardensController < ApplicationController
     @garden = Garden.new(garden_params)
     @garden.user = current_user
     @garden.save
-    redirect_to gardens_path(@garden)
+    redirect_to packagechoice_path(@garden)
   end
 
   def index
@@ -24,6 +24,12 @@ class GardensController < ApplicationController
     @garden.destroy
     # No need for app/views/gardens/destroy.html.erb
     redirect_to gardens_path, status: :see_other
+  end
+
+
+  def packagechoice
+    @garden = Garden.find(params[:id])
+    @packages = Package.where(size: @garden.size)
   end
 
   private

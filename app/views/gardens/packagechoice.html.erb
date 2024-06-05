@@ -1,0 +1,11 @@
+<%= link_to 'Retour', new_garden_path %>
+<h2>Package Choice</h2>
+
+  <div class="package-choice-container">
+    <p> Voici les packages proposés selon les critères de votre futur potager ...</p>
+      <div class="iteration container">
+        <% @packages.each do |package|  %>
+        <%= package.name %>
+      <% end %>
+      </div>
+  </div>
