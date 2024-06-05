@@ -2,10 +2,13 @@
 <h2>Package Choice</h2>
 
   <div class="package-choice-container">
-    <p> Voici les packages proposés selon les critères de votre futur potager ...</p>
-      <div class="iteration container">
+    <p>Pour <%=@garden.name%> nous vous proposons 4 kits </p>
+      <div class="package-choice-iteration-container">
         <% @packages.each do |package|  %>
-        <%= package.name %>
+          <div class= "cards-legend-container">
+            <%= package.name %> <br>
+            <%= package.description %>
+          </div>
       <% end %>
       </div>
   </div>
