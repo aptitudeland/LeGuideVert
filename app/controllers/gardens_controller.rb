@@ -1,6 +1,17 @@
 class GardensController < ApplicationController
+  def new
+    @garden = Garden.new
+  end
+
+  def create
+    @garden = Garden.new(garden_params)
+    @garden.user = current_user
+    @garden.save
+    redirect_to gardens_path(@garden)
+  end
+
   def index
-    @gardens = Garden.all
+    @mygardens = Garden.all.where(user: current_user)
   end
 
   def show
@@ -8,9 +19,16 @@ class GardensController < ApplicationController
     @garden_steps = @garden.garden_steps.includes(:step)
   end
 
-  # private
+  def destroy
+    @garden = Garden.find(params[:id])
+    @garden.destroy
+    # No need for app/views/gardens/destroy.html.erb
+    redirect_to gardens_path, status: :see_other
+  end
 
-  # def garden_params
-  #   params.require(:garden).permit(:name, :address, :size, :exposition)
-  # end
+  private
+
+  def garden_params
+    params.require(:garden).permit(:name, :size, :exposition, :address)
+  end
 end
