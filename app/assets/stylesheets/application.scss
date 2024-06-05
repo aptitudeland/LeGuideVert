@@ -10,5 +10,32 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "pages/gardensindex";
-@import "pages/package_choice";
+@import "pages/garden_steps_show";
+@import "pages/gardens_index";
+@import "pages/gardens_new";
+@import "pages/gardens_show";
+
+
+
+.main-container {
+  margin: 2em;
+
+  body {
+    color:#0b4f30;
+
+  }
+
+  a:visited {
+    color:inherit; /* Keep the original color when visited */
+  }
+
+  // :hover {
+  //   background-color: #3c0b41; /* or any highlight color */
+  // }
+
+  a {
+    color:#8ec640;
+    text-decoration:none;
+  }
+
+}
