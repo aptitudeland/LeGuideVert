@@ -1,4 +1,7 @@
 <div>
+  <%= link_to "Retour", garden_path(@garden) %>
+</div>
+<div>
 <h1><%= @step.order %> - <%= @step.name %></h1>
 </div>
 
@@ -8,19 +11,17 @@
     <%= task.description %>
     <br>
   <% end %>
+  <br>
 </div>
 
-<div>
-  <%= link_to "Retour", garden_path(@garden) %>
-</div>
 
 <div>
 <%= simple_form_for(@garden_step) do |f| %>
 <div class="d-none">
- <%= f.input :status, input_html: {value: "terminé"}%>
+ <%= f.input :status, input_html: {value: "Terminé"}%>
  </div>
   <%= button_tag(type: 'submit', class: "b") do %>
-    <i class="icon-ok icon-white"></i> Fini
+    <i class="icon-ok icon-white"></i> Terminé
   <% end %>
  <% end %>
 </div>
