@@ -16,7 +16,7 @@ class GardensController < ApplicationController
 
   def show
     @garden = Garden.find(params[:id])
-    @garden_steps = @garden.garden_steps.includes(:step)
+    @garden_steps = @garden.garden_steps.includes(:step).sort_by { |garden_step| garden_step.step.order }
   end
 
   def destroy
