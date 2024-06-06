@@ -3,7 +3,7 @@
 <%= form_with model: @garden do |f| %>
   <%= f.label :Nom %>
   <%= f.text_field :name %>
-  <%= f.label :Addresse %>
+  <%= f.label :Adresse %>
   <%= f.text_field :address %>
   <%= f.label :Taille %>
   <%= f.select :size, options_for_select(['Jardinière', 'Bac potager', 'Potager partagé']) %>
