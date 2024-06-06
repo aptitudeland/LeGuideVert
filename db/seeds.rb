@@ -370,35 +370,35 @@ puts "Creating garden steps"
 GardenStep.create!(
   garden: garden1,
   step: step1_1,
-  status: "🌱 A faire !"
+  status: 0
 )
 
 GardenStep.create!(
   garden: garden1,
   step: step1_2,
-  status: "🌱 A faire !"
+  status: 0
 )
 
 GardenStep.create!(
   garden: garden1,
   step: step1_3,
-  status: "🌱 A faire !"
+  status: 0
 )
 
 GardenStep.create!(
   garden: garden2,
   step: step2_1,
-  status: "🌱 A faire !"
+  status: 0
 )
 
 GardenStep.create!(
   garden: garden2,
   step: step2_2,
-  status: "🌱 A faire !"
+  status: 0
 )
 
 GardenStep.create!(
   garden: garden2,
   step: step2_3,
-  status: "🌱 A faire !"
+  status: 0
 )

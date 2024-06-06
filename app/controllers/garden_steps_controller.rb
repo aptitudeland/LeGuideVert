@@ -9,7 +9,7 @@ class GardenStepsController < ApplicationController
 
   def update
     set_garden_step
-    @garden_step.update(garden_step_params)
+    @garden_step.update(status: garden_step_params[:status].to_i)
     redirect_to garden_path(@garden_step.garden)
   end
 
