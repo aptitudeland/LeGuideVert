@@ -17,7 +17,7 @@
 <div>
  <%= simple_form_for(@garden_step) do |f| %>
     <div class="d-none">
-    <%= f.input :status, input_html: {value: "🌱 A faire !"}%>
+    <%= f.input :status, input_html: {value: 0}%>
   </div>
       <%= button_tag(type: 'submit', class: "btn btn-light border") do %>
         <i class="icon-ok icon-white"></i> J'ai pas fini 😅
@@ -26,7 +26,7 @@
 <br>
   <%= simple_form_for(@garden_step) do |f| %>
     <div class="d-none">
-      <%= f.input :status, input_html: {value: "🎉 Etape terminée ! 🎉"}%>
+      <%= f.input :status, input_html: {value: 1}%>
     </div>
       <%= button_tag(type: 'submit', class: "btn btn-success border") do %>
         <i class="icon-ok icon-white"></i> J'ai fini ! 💪
