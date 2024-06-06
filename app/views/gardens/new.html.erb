@@ -1,13 +1,14 @@
-<h1>New Garden</h1>
-
+<h1>Créer un nouveau potager</h1>
+<div class= 'formulaire-du-potager'>
 <%= form_with model: @garden do |f| %>
-  <%= f.label :name %>
+  <%= f.label :Nom %>
   <%= f.text_field :name %>
-  <%= f.label :address %>
+  <%= f.label :Addresse %>
   <%= f.text_field :address %>
-  <%= f.label :size %>
-  <%= f.select :size, options_for_select(['Jardinière', 'Bac à potager', 'Potager partagé']) %>
-  <%= f.label :exposition %>
+  <%= f.label :Taille %>
+  <%= f.select :size, options_for_select(['Jardinière', 'Bac potager', 'Potager partagé']) %>
+  <%= f.label :Exposition %>
   <%= f.select :exposition, options_for_select(['Pas de soleil', 'Soleil le matin', 'Soleil le midi', 'Soleil en après-midi']) %>
   <%= f.submit %>
 <% end %>
+</div>
