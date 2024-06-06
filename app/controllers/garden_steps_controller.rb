@@ -13,6 +13,16 @@ class GardenStepsController < ApplicationController
     redirect_to garden_path(@garden_step.garden)
   end
 
+  def create
+    garden = Garden.find(params[:garden_id])
+    package = Package.find(params[:package_id])
+    steps = Step.where(package: package)
+      steps.each do |step|
+        GardenStep.create!(garden: garden, step: step)
+      end
+    redirect_to garden_path(garden)
+  end
+
   private
 
   def set_garden_step

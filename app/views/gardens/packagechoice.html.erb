@@ -1,0 +1,24 @@
+<%= link_to 'Retour', new_garden_path %>
+<h2>Package Choice</h2>
+
+  <div class="package-choice-container">
+    <p>Pour <%=@garden.name%> nous vous proposons 4 kits </p>
+      <div class="package-choice-iteration-container">
+          <%=form_with url: garden_garden_steps_path(@garden), method: "post" do |f| %>
+            <% @packages.each do |package|  %>
+              <%= f.radio_button 'package_id', package.id, class: "package-choice-radio-button" %>
+              <%= f.label "package_id_#{package.id}" do %>
+                <div class= "package-choice-iteration-card">
+                <%= image_tag("categories/#{package.category.downcase}.jpg")  %>
+                  <div class= "package-choice-iteration-card-infos">
+                    <h2><%= package.category %></h2>
+                    <h3><%= package.name %></h3>
+                    <p><%= package.description %></p>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+          <%= f.submit value: "Valider" %>
+        <% end %>
+      </div>
+  </div>
