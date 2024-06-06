@@ -1,51 +1,73 @@
-.garden-card {
-  overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+.garden-index-main-container {
   display: flex;
+  flex-direction: column;
+  // align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+.new-garden-button {
+  font-size: 3em;
+  z-index: 2; /* Assure que l'élément est au-dessus des autres éléments */
+}
+
+.garden-index-title-container {
+  margin-bottom: 1em;
+  display: flex;
+  // flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  border-radius: 5px; /* Bordure arrondie */
-  margin: 5 rem;
-  }
 
-.garden-card:hover {
-  background-color: #0B4F30;
-  color: white;
-  border-color: #0B4F30; /* Couleur de fond au survol */
-  font-weight: bold;
+  width: 100%; /* Assure que le conteneur occupe toute la largeur */
+  // display: flex;
+  // justify-content: space-between;
+}
+
+.gardens-index-cards-container {
+  // width: 100%;
+  // align-items: center;
+}
+
+.garden-card {
+
+  padding: 0.5em;
+  border: solid 1px rgba(11, 79, 48, 0.24);
+  margin-bottom: 2em;
+  box-shadow: rgba(11, 79, 48, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction:row;
+  // align-items: center;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+  // width: 100%;
+}
+
+.garden-picture-container {
+  height: 50px;
+  width: 50px;
+  border: solid 1px rgba(11, 79, 48, 0.24);
+}
+
+.garden-info {
+  padding-left: 10px;
 }
 
 
-.garden-card img {
-  height: 75%;
-  width: 35%;
-  object-fit: cover;
+.garden-info-title-trash {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline
 }
 
-.garden-info h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  color: #0B4F30;
-  }
+.delete-garden-button {
+  font-size: 1.2em;
 
-
-.garden-info p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-  color: #0B4F30;
-  }
-
-
-.garden-card .garden-infos {
-  padding: 16px;
-}
-
-.title-mes-potagers {
-  color: #0B4F30;
-  size: 3rem;
 }
