@@ -1,4 +1,71 @@
-.garden-card {
-  // border: solid 1px black;
+.garden-index-main-container {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 2.5em;
+  }
 }
 
+.new-garden-button {
+  font-size: 3em;
+  z-index: 2; /* Assure que l'élément est au-dessus des autres éléments */
+}
+
+.garden-index-title-container {
+  margin-bottom: 1em;
+  display: flex;
+  // flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%; /* Assure que le conteneur occupe toute la largeur */
+  // display: flex;
+  // justify-content: space-between;
+}
+
+.gardens-index-cards-container {
+  // width: 100%;
+  // align-items: center;
+}
+
+.garden-card {
+  padding: 0.5em;
+  border: solid 1px rgba(11, 79, 48, 0.24);
+  margin-bottom: 2em;
+  box-shadow: rgba(11, 79, 48, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction:row;
+  // align-items: center;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+  // width: 100%;
+}
+
+.garden-picture-container {
+  height: 50px;
+  width: 50px;
+  border: solid 1px rgba(11, 79, 48, 0.24);
+}
+
+.garden-info {
+  padding-left: 10px;
+}
+
+
+.garden-info-title-trash {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline
+}
+
+.delete-garden-button {
+  font-size: 1.2em;
+}
