@@ -1,7 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  border-bottom: solid 2px #0b4f30;
+  border-bottom: solid 2px #6b952f;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,4 +10,25 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.home {
+  font-size: 30px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.fa-house, a.dropdown-item {
+  color:#8ec640;
+}
+
+.logo {
+  text-align: center;
+}
+
+.userphoto {
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
