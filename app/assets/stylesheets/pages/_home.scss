@@ -1,1 +1,48 @@
-// Specific CSS for your home-page
+.home-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+
+}
+
+
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.slogan {
+    color: #0B4F30;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+
+}
+
+#boutonmespotagers {
+    background-color: #0B4F30;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+#boutonmespotagers:hover {
+    background-color: white;
+    color: #0B4F30;
+    font-weight: bold;
+}
+   
