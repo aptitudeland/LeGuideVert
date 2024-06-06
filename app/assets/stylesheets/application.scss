@@ -18,10 +18,6 @@
 
 body {
   color:#0b4f30;
-}
-
-.main-container {
-  margin: 1em;
 
   a {
     // color:#8ec640;
@@ -30,10 +26,14 @@ body {
   }
 
   a:hover {
-      background-color: rgba(16, 138, 83, 0.24); /* or any highlight color */
+    background-color: rgba(16, 138, 83, 0.24); /* or any highlight color */
   }
 
-  a :visited {
+  a:visited {
     color: inherit; /* Keep the original color when visited */
   }
+}
+
+.main-container {
+  margin: 1em;
 }
