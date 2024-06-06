@@ -9,28 +9,28 @@
 
 // Your CSS partials
 @import "components/index";
-@import "pages/index";
 @import "pages/garden_steps_show";
 @import "pages/gardens_index";
 @import "pages/gardens_new";
 @import "pages/gardens_show";
+@import "pages/index";
 @import "pages/package_choice";
 
 body {
   color:#0b4f30;
 }
+
 .main-container {
   margin: 1em;
-
-
-  a:hover {
-      background-color: rgba(16, 138, 83, 0.24); /* or any highlight color */
-    }
 
   a {
     // color:#8ec640;
     color:#0b4f30;
     text-decoration:none;
+  }
+
+  a:hover {
+      background-color: rgba(16, 138, 83, 0.24); /* or any highlight color */
   }
 
   a :visited {
