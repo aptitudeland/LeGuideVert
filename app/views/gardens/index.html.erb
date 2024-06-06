@@ -10,6 +10,10 @@
   <div class="gardens-index-cards-container">
     <% @mygardens.each do |garden| %>
       <div class="garden-card">
+            <div class="delete-garden-button">
+              <%= link_to  garden_path(garden), data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr?"} do %>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              <% end %>
         <div class="garden-picture-container">
           <%# <img src="../../../storage/Garden_pictures/Balcon.webp" alt="Picture of the garden"> %>
         </div>
@@ -18,10 +22,6 @@
             <div>
             <h2><%= link_to garden.name, garden_path(garden) %></h2>
             </div>
-            <div class="delete-garden-button">
-              <%= link_to  garden_path(garden), data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr?"} do %>
-                <i class="fa fa-trash" aria-hidden="true"></i>
-              <% end %>
            </div>
           </div>
           <%= garden.size %>

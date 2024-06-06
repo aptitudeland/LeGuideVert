@@ -55,17 +55,21 @@
 
 .garden-info {
   padding-left: 10px;
+  width: auto;
 }
 
 
-.garden-info-title-trash {
-  display: flex;
-  flex-direction:row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline
-}
+// .garden-info-title-trash {
+//   display: flex;
+//   flex-direction:row;
+//   // align-items:normal;
+//   position: relative;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+//   align-items: baseline
+// }
 
 .delete-garden-button {
+  position: relative;
   font-size: 1.2em;
 }
