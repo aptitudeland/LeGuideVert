@@ -13,6 +13,18 @@ class GardenStepsController < ApplicationController
     redirect_to garden_path(@garden_step.garden)
   end
 
+  def create
+    garden = Garden.find(params[:garden_id])
+    package = Package.find(params[:package_id])
+    steps = Step.where(package: package)
+      steps.each do |step|
+        # ATTENTION - Il faut enlever le statut: "A faire" avant d'envoyer la pull request !
+        GardenStep.create!(garden: garden, step: step, status: "A faire")
+      end
+    redirect_to garden_path(garden)
+  end
+
+
   private
 
   def set_garden_step

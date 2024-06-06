@@ -11,15 +11,65 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  gap: 10px
+  gap: 40px
   }
 
 .package-choice-iteration-card {
   overflow: hidden;
-  background: rgb(161, 160, 160);
+  // background: #f8f9fa;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   color: #0b4f30;
   align-items: center;
+  flex-direction: row;
+  margin: .5rem;
 
+    img{
+      height: 100%;
+      width: 120px;
+      object-fit: cover;
+      margin: .5rem;
+    }
+
+    h2{
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    p{
+      font-size: 12px;
+      line-height: 1.4;
+      opacity: .7;
+      margin-bottom: 0;
+      margin-top: 8px;
+    }
   }
+
+  .package-choice-iteration-card-infos {
+    overflow: hidden;
+    // background: #f8f9fa;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    color: #0b4f30;
+    align-items: center;
+    flex-direction: column;
+    padding: .5rem;
+
+    }
+
+    .package-choice-radio-button{
+    position: absolute;
+    transform: scale(0);
+    }
+
+    .package-choice-radio-button:checked + label{
+     .package-choice-iteration-card{
+      background-color: #0b4f30;
+      .package-choice-iteration-card-infos {
+
+        color: white
+      }
+      }
+
+    }
