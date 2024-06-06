@@ -1,3 +1,14 @@
+
+.home-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+
+}
+
 body {
     height: 100%;
     margin: 0;
@@ -21,14 +32,38 @@ body {
     width: 100px; /* Largeur du logo, ajustez selon vos besoins */
     height: auto; /* Hauteur auto pour conserver les proportions */
     margin-bottom: 20px; /* Espace sous le logo */
+
 }
 
 .slogan {
     color: #0B4F30;
     font-weight: bold;
+    display: flex;
     margin-bottom: 20px; /* Espace sous le slogan */
     text-align: center; /* Centre le texte */
 }
+
+#boutonmespotagers {
+    background-color: #0B4F30;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+#boutonmespotagers:hover {
+    background-color: white;
+    color: #0B4F30;
+    font-weight: bold;
+}
+   
 
 .boutonmespotagers {
     background-color: #0B4F30; /* Couleur de fond */
@@ -51,3 +86,4 @@ body {
     border-color: #0B4F30; /* Couleur de fond au survol */
     font-weight: bold;
 }
+
