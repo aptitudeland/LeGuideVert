@@ -1,16 +1,14 @@
-.navbar-lewagon {
+
+.navbar-metrovert {
   justify-content: space-between;
   background: white;
   border-bottom: solid 2px #6b952f;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
+.navbar-metrovert .navbar-brand img {
   width: 40px;
 }
+
 
 .home {
   font-size: 30px;
@@ -25,6 +23,7 @@
 
 .logo {
   text-align: center;
+  width: 40px;
 }
 
 .userphoto {
