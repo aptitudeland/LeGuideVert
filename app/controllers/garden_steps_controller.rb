@@ -9,7 +9,7 @@ class GardenStepsController < ApplicationController
 
   def update
     set_garden_step
-    @garden_step.update(garden_step_params)
+    @garden_step.update(status: garden_step_params[:status].to_i)
     redirect_to garden_path(@garden_step.garden)
   end
 
@@ -19,11 +19,10 @@ class GardenStepsController < ApplicationController
     steps = Step.where(package: package)
       steps.each do |step|
         # ATTENTION - Il faut enlever le statut: "A faire" avant d'envoyer la pull request !
-        GardenStep.create!(garden: garden, step: step, status: "A faire")
+        GardenStep.create!(garden: garden, step: step)
       end
     redirect_to garden_path(garden)
   end
-
 
   private
 
@@ -35,13 +34,3 @@ class GardenStepsController < ApplicationController
     params.require(:garden_step).permit(:status)
   end
 end
-
-# def update_status
-#   @reservation = Reservation.find(params[:id])
-#   if @reservation.update(status: params[:reservation][:status])
-#     flash[:notice] = "Le statut de la réservation a bien été mis à jour à : #{params[:reservation][:status]} ."
-#   else
-#     flash[:alert] = 'Une erreur est survenue lors de la mise à jour du statut.'
-#   end
-#   redirect_back(fallback_location: @reservation.legend)
-# end

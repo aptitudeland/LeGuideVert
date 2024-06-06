@@ -1,26 +1,32 @@
-<div>
-  <h1>Mes potagers</h1>
-  <%= link_to new_garden_path do %>
-    <i class="fa-solid fa-plus"></i>
-  <% end %>
-  <br>
-    <% @mygardens.each do |garden| %>
-      <div class= garden-card>
-          <div class="garden-info">
-            <h2><%= link_to garden.name, garden_path(garden) %></h2>
-            <p>
-              <%= garden.address %> <br>
-              taille: <%= garden.size %> <br>
-              exposition: <%= garden.exposition %> <br>
-            </p>
-          </div>
+<div class="garden-index-main-container">
 
-          <div class="delete-button">
-            <%= link_to  garden_path(garden),
-            data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr?"} do%>
-            <i class="fa fa-trash" aria-hidden="true"></i>
-            <% end %>
+  <div class="garden-index-title-container">
+     <h1>Mes potagers</h1>
+     <%= link_to new_garden_path do %>
+      <i class="fa-solid fa-plus new-garden-button"></i>
+    <% end %>
+  </div>
+
+  <div class="gardens-index-cards-container">
+    <% @mygardens.each do |garden| %>
+      <div class="garden-card">
+        <div class="garden-picture-container">
+          <%# <img src="../../../storage/Garden_pictures/Balcon.webp" alt="Picture of the garden"> %>
+        </div>
+        <div class="garden-info">
+          <div class="garden-info-title-trash">
+            <div>
+            <h2><%= link_to garden.name, garden_path(garden) %></h2>
+            </div>
+            <div class="delete-garden-button">
+              <%= link_to  garden_path(garden), data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr?"} do %>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              <% end %>
+           </div>
           </div>
+          <%= garden.size %>
+        </div>
       </div>
     <% end %>
+  </div>
 </div>

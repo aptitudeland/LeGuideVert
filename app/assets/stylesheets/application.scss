@@ -16,25 +16,24 @@
 @import "pages/gardens_show";
 @import "pages/package_choice";
 
-
 .main-container {
-  margin: 2em;
+  margin: 1em;
 
-
-
+  body {
+    color:#0b4f30;
   }
 
-  a:visited {
-    color:inherit; /* Keep the original color when visited */
-  }
-
-  // :hover {
-  //   background-color: #3c0b41; /* or any highlight color */
-  // }
+  a:hover {
+      background-color: rgba(16, 138, 83, 0.24); /* or any highlight color */
+    }
 
   a {
-    color:#8ec640;
+    // color:#8ec640;
+    color:#0b4f30;
     text-decoration:none;
   }
 
-
+  a :visited {
+    color: inherit; /* Keep the original color when visited */
+  }
+}
