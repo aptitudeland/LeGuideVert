@@ -6,7 +6,7 @@
   background-color: #f0f0f0; /* Couleur de fond */
 }
 
-.formulaire-du-potager h1 {
+ h1 {
   text-align: center; /* Centrer le titre */
   color: #0B4F30; /* Couleur du texte */
 }
@@ -43,15 +43,15 @@
 }
 
 .formulaire-du-potager input[type="submit"]:hover {
-    background-color: white;
-    color: #0B4F30;
-    border-color: #0B4F30; /* Couleur de fond au survol */
-    font-weight: bold;
+  background-color: white;
+  color: #0B4F30;
+  border-color: #0B4F30; /* Couleur de fond au survol */
+  font-weight: bold;
 }
 
 /* Media queries pour les écrans de taille moyenne et inférieure */
 @media screen and (max-width: 768px) {
   .formulaire-du-potager {
-      max-width: 90%; /* Réduire la largeur maximale */
+    max-width: 90%; /* Réduire la largeur maximale */
   }
 }

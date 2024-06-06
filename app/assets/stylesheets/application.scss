@@ -16,12 +16,13 @@
 @import "pages/gardens_show";
 @import "pages/package_choice";
 
+body {
+  color:#0b4f30;
+}
+
 .main-container {
   margin: 1em;
 
-  body {
-    color:#0b4f30;
-  }
 
   a:hover {
       background-color: rgba(16, 138, 83, 0.24); /* or any highlight color */
