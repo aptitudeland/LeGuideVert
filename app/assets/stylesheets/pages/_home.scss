@@ -1,3 +1,4 @@
+
 .home-container {
   height: 90vh;
   display: flex;
@@ -8,21 +9,38 @@
 
 }
 
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bcdd8c;
+}
 
+.container {
+    flex: 1; /* Prend tout l'espace disponible */
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: justify; /* Centre les éléments verticalement */
+    padding-bottom: 20px; /* Espace en bas pour le bouton */
+}
 
 .logo {
-    width: 100px;
-    height: auto;
-    margin-bottom: 20px;
+    width: 100px; /* Largeur du logo, ajustez selon vos besoins */
+    height: auto; /* Hauteur auto pour conserver les proportions */
+    margin-bottom: 20px; /* Espace sous le logo */
+
 }
 
 .slogan {
     color: #0B4F30;
     font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
     display: flex;
-
+    margin-bottom: 20px; /* Espace sous le slogan */
+    text-align: center; /* Centre le texte */
 }
 
 #boutonmespotagers {
@@ -46,3 +64,26 @@
     font-weight: bold;
 }
    
+
+.boutonmespotagers {
+    background-color: #0B4F30; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px; /* Espacement intérieur */
+    font-size: 16px; /* Taille du texte */
+    border-radius: 5px; /* Bordure arrondie */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ombre floue */
+    transition: background-color 0.3s ease; /* Transition pour le changement de couleur */
+    text-align: center; /* Centre le texte */
+    font-weight: bold;
+    display: inline-block; /* Taille du bouton limitée à la taille du texte */
+    white-space: nowrap;
+}
+
+.boutonmespotagers:hover {
+    background-color: white;
+    color: #0B4F30;
+    border-color: #0B4F30; /* Couleur de fond au survol */
+    font-weight: bold;
+}
+

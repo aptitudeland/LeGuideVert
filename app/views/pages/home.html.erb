@@ -1,6 +1,18 @@
-  <table  width="150" height="150" style="background-color:green; border-collapse:collapse"></table>
-  <h1>MetroVert</h1>
-  <p> L’application incoutournable pour les débutants du potager en ville ! </p>
-  <p>
-    <%= link_to 'Voir mes jardins', gardens_path %>
-  </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application pour Potagers en ville</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <p class="slogan">L’application incontournable pour les débutants du potager en ville !</p>
+        <p class="boutonmespotagers">
+            <%= link_to 'Mes potagers', gardens_path %>
+        </p>
+    </div>
+</body>
+</html>
