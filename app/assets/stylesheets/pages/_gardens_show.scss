@@ -13,8 +13,9 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.garden-image {
-  height: 180px;
-  width: 100%;
-  object-fit: cover;
+.delete-button {
+  position: absolute;
+  right: 20px;
+  top: 200px;
+  width: 40px;
 }
