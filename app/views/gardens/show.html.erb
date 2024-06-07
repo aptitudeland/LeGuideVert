@@ -1,7 +1,8 @@
 <div class="garden-show">
   <div class="garden-category">
-    <div class="garden-name-image">
+    <div class="garden-image">
       <%= image_tag ("garden_pictures/jardiniere.png") %>
+    </div>
       <h2><%= @garden.name %></h2>
       <div class="delete-button">
         <%= link_to garden_path(@garden), data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr?"} do%>
