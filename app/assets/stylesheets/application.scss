@@ -11,24 +11,6 @@
 @import "components/index";
 @import "pages/index";
 
-body {
-  color:#0b4f30;
-
-  a {
-    // color:#8ec640;
-    color:#0b4f30;
-    text-decoration:none;
-  }
-
-  a:hover {
-    // background-color: rgba(16, 138, 83, 0.24); /* or any highlight color */
-    color: inherit;
-  }
-
-  a:visited {
-    color: inherit; /* Keep the original color when visited */
-  }
-}
 
 .main-container {
   margin: 1em;
