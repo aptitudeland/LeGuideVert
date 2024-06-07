@@ -1,0 +1,57 @@
+.formulaire-du-potager {
+  max-width: 400px; /* Largeur maximale du formulaire */
+  margin: 0 auto; /* Centrer le formulaire horizontalement */
+  padding: 20px; /* Espacement intérieur */
+  border-radius: 20px; /* Coins arrondis */
+  background-color: #f0f0f0; /* Couleur de fond */
+}
+
+.formulaire-du-potager h1 {
+  text-align: center; /* Centrer le titre */
+  color: #0B4F30; /* Couleur du texte */
+}
+
+.formulaire-du-potager label {
+  display: block; /* Afficher les labels sur une ligne différente */
+  margin-top: 10px; /* Espacement entre les labels */
+}
+
+.formulaire-du-potager input[type="text"],
+.formulaire-du-potager select {
+  width: 100%; /* Largeur à 100% */
+  padding: 10px; /* Espacement intérieur */
+  margin-top: 5px; /* Espacement entre les champs */
+  border: 1px solid #ccc; /* Bordure */
+  border-radius: 5px; /* Coins arrondis */
+  box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur */
+}
+
+.formulaire-du-potager select {
+  width: calc(100% - 2px); /* Largeur ajustée pour compenser la bordure */
+}
+
+.formulaire-du-potager input[type="submit"] {
+  width: 100%; /* Largeur à 100% */
+  padding: 10px; /* Espacement intérieur */
+  margin-top: 20px; /* Espacement entre le bouton et les autres champs */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  background-color: #0B4F30; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte du bouton */
+  font-size: 16px; /* Taille de police */
+  cursor: pointer; /* Curseur de la souris */
+}
+
+.formulaire-du-potager input[type="submit"]:hover {
+    background-color: white;
+    color: #0B4F30;
+    border-color: #0B4F30; /* Couleur de fond au survol */
+    font-weight: bold;
+}
+
+/* Media queries pour les écrans de taille moyenne et inférieure */
+@media screen and (max-width: 768px) {
+  .formulaire-du-potager {
+      max-width: 90%; /* Réduire la largeur maximale */
+  }
+}

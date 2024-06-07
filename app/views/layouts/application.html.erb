@@ -11,13 +11,13 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <% unless action_name == 'home' %>
-    <%= render "shared/navbar" %>
-  <% end %>
-  <div class="main-container">
-    <body>
-      <%= render "shared/flashes" %>
-      <%= yield %>
-    </body>
-  </div>
+  <body>
+    <% unless action_name == 'home' || ["registration","sessions"].include?(controller_name) %>
+      <%= render "shared/navbar" %>
+    <% end %>
+    <div class="main-container">
+        <%= render "shared/flashes" %>
+        <%= yield %>
+    </div>
+  </body>
 </html>
