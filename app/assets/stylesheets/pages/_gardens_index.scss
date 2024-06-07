@@ -4,6 +4,7 @@
   // align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+  position: relative;
 
   h1 {
     font-size: 2.5em;
@@ -11,6 +12,9 @@
 }
 
 .new-garden-button {
+  position: fixed;
+  top: 1em;
+  right: 1em;
   font-size: 3em;
   z-index: 2; /* Assure que l'élément est au-dessus des autres éléments */
 }
@@ -22,7 +26,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-
   width: 100%; /* Assure que le conteneur occupe toute la largeur */
   // display: flex;
   // justify-content: space-between;

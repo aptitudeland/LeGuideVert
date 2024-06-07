@@ -1,12 +1,13 @@
 
 <div class="garden-index-main-container">
-
   <div class="garden-index-title-container">
-     <h1>Mes potagers</h1>
-     <%= link_to new_garden_path do %>
-      <i class="fa-solid fa-plus new-garden-button"></i>
-    <% end %>
+    <h1>Mes potagers</h1>
   </div>
+    <div class="new-garden-button">
+      <%= link_to new_garden_path do %>
+        <i class="fa-solid fa-plus "></i>
+      <% end %>
+    </div>
 
   <div class="gardens-index-cards-container">
     <% @mygardens.each do |garden| %>
