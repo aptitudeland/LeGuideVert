@@ -1,35 +1,34 @@
 <div class="garden-show">
+  <div class="garden-category">
+    <div class="garden-name-image">
+      <%= image_tag ("garden_pictures/jardiniere.png") %>
+      <h2><%= @garden.name %></h2>
+      <div class="delete-button">
+        <%= link_to garden_path(@garden), data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr?"} do%>
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="garden-info">
+    <p >
+      <%= @garden.address %> <br>
+      taille: <%= @garden.size %> <br>
+      exposition: <%= @garden.exposition %> <br>
+    </p>
+  </div>
+  <div class="steps">
+    <h3> Étapes :</h3>
+    <% @garden_steps.each do |garden_step| %>
+        <p>
+          <strong><%= garden_step.step.order %> -</strong>
+          <%= link_to garden_step.step.name, garden_step_path(garden_step) %> <br>
+          <%= garden_step.step.description %> <br>
+          <strong><%= garden_step.status %></strong>
+        </p>
+    <% end %>
+  </div>
   <div class="retour-button">
     <%= link_to 'Retour', gardens_path %> <br>
-  </div>
-    <div>
-      <h2>
-        <div class="delete-button">
-          <%= link_to garden_path(@garden), data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr?"} do%>
-          <i class="fa fa-trash" aria-hidden="true"></i>
-          <% end %>
-        </div>
-      <%= @garden.name %>
-      </h2>
-      <p>
-        <%= @garden.address %> <br>
-        taille: <%= @garden.size %> <br>
-        exposition: <%= @garden.exposition %> <br>
-      </p>
-  </div>
-  <h3> Étapes :</h3>
-  <div>
-  <% @garden_steps.each do |garden_step| %>
-    <div class="step">
-      <p>
-        <strong><%= garden_step.step.order %> -</strong>
-        <%= link_to garden_step.step.name, garden_step_path(garden_step) %> <br>
-        <%= garden_step.step.description %> <br>
-        <strong><%= garden_step.status %></strong>
-
-      </p>
-    </div>
-  <% end %>
-
   </div>
 </div>
