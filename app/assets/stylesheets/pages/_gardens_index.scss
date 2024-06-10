@@ -11,9 +11,14 @@
   }
 }
 
+.gardens-index-cards-container {
+  // width: 100%;
+  // align-items: center;
+  }
+
 .new-garden-button {
   position: fixed;
-  top: 1em;
+  top: 64px;
   right: 1em;
   font-size: 3em;
   z-index: 2; /* Assure que l'élément est au-dessus des autres éléments */
@@ -28,11 +33,6 @@
   width: 100%; /* Assure que le conteneur occupe toute la largeur */
   // display: flex;
   // justify-content: space-between;
-}
-
-.gardens-index-cards-container {
-  // width: 100%;
-  // align-items: center;
 }
 
 .garden-card {
@@ -73,7 +73,9 @@
 // }
 
 .delete-garden-button {
-  position: relative;
-  font-size: 1.2em;
-
+  // position: fixed;
+  // top: 64px;
+  // right: 1em;
+  font-size: 3em;
+  // z-index: 2;
 }
