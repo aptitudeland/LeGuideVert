@@ -19,7 +19,9 @@
     <div data-tabs-target="tab" id="tab1" class="infos">
       <% @tasks.order(1)%>
       <div class= "infos-tech">
+      <i class="fa-solid fa-shop fa-lg" style="color: #0b4f30;"></i>
       <p><%= @tasks[0].name %></p>
+      <i class="fa-solid fa-trowel fa-lg" style="color: #0b4e31;"></i>
       <p><%= @tasks[0].description %></p>
       </div>
     </div>
@@ -27,6 +29,7 @@
     <div data-tabs-target="tab" id="tab2" class='hidden'>
         <p><% @tasks.order(2)%></p>
       <div class= "infos-tech">
+      <i class="fa-light fa-dollar-sign" style="color: #0b4f30;"></i>
       <p><%= @tasks[1].name %></p>
       <p><%= @tasks[1].description  %></p>
       </div>
