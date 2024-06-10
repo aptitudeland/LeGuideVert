@@ -4,9 +4,10 @@
   // align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+  height: 100%;
 
   h1 {
-    font-size: 3em;
+    font-size: 10vw;
     text-align: center;
     }
 }
@@ -83,6 +84,25 @@
   // text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
 }
 
+.no-gardens-message {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 3vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.no-gardens-arrow {
+  max-width: 40%;
+  max-height: 32rem;
+}
+
+.no-gardens-picture {
+  max-width: 80%;
+}
 // .garden-info-title-trash {
 //   display: flex;
 //   flex-direction:row;
