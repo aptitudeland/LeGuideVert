@@ -1,6 +1,6 @@
 require "test_helper"
 
-class GardenFormStepsControllerTest < ActionDispatch::IntegrationTest
+class GardenFormControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
