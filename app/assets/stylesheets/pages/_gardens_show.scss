@@ -1,17 +1,20 @@
+
 .garden-category {
   background-size: cover;
   background-position: center;
-  height: 140px;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("garden_size/size_2_bac.jpeg");
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: 8EC640;
+  color: white;
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   position: relative;
+
 }
 
 .garden-category .delete-button {
@@ -22,42 +25,53 @@
   color: #8EC640;
 }
 
-.garden-info-card {
-  background-size: cover;
-  background-position: center;
-  height: 75px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin-top: 8px;
-}
-
- .garden-info {
-  color: noir;
-  margin-bottom: 4px;
-}
-
-.step-title {
+/*.step-title {
   text-align: center;
   font-size: 16px;
-  margin-top: 8px;
+  color: #8EC640;
+  margin-top: 20px;
   margin-bottom: 0px;
+}*/
+/*.step {
+height: 500px;
+}*/
+.img-card{
+  width: 7rem;
+  margin-left: 1rem;
 }
 
 .step-card {
-  background-size: cover;
-  background-position: center;
-  height: 110px;
-  font-size: 14px;
-  border-radius: 5px;
+  overflow: hidden;
+  height: 150px;
+  background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  text-align: left;
-  margin-bottom: 5px;
-  padding-top: 3px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+.step-card-info{
+  display: flex;
+  flex-direction: column;
+  width: 11rem;
+  margin-inline: 2rem;
+}
+
+.step-card h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.step-card p {
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+
 
 .retour-button {
   margin-top: 8px;
@@ -65,4 +79,8 @@
   color: white;
   width: 60px;
   padding: 3px 5px;
+}
+
+.status {
+  text-align: right;
 }
