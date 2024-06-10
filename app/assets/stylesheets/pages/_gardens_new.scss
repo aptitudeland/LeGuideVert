@@ -1,3 +1,11 @@
+.container {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  height: 100%; /* Prend toute la hauteur de la page */
+  margin-top: 2rem;
+}
+
 .formulaire-du-potager {
   max-width: 400px; /* Largeur maximale du formulaire */
   margin: 0 auto; /* Centrer le formulaire horizontalement */
@@ -9,6 +17,7 @@
 .titre-form {
   text-align: center; /* Centrer le titre */
   color: #0B4F30; /* Couleur du texte */
+  margin-top: 7rem;
 }
 
 .formulaire-du-potager label {
