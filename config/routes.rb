@@ -2,23 +2,19 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
 
-  resources :gardens do
-    collection do
-      patch 'next_step'
-    end
+  resources :garden_form, only: [:create], as: :garden_form do
+    get :step1, on: :collection
+    post :step2, on: :collection
+    post :step3, on: :collection
+    post :step4, on: :collection
   end
-  
+
+
   resources :gardens do
     resources :garden_steps, only: [:create]
   end
 
   resources :garden_steps, only: [:show, :edit, :update]
-
-  resources :garden_form_step, only: [:new, :create, :edit, :update], path: 'form_steps' do
-    member do
-      get :previous
-    end
-  end
 
 
   resources :gardens
