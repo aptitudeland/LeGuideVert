@@ -1,26 +1,56 @@
-<div>
-  <%= link_to "Retour", garden_path(@garden) %>
-</div>
-<div>
-<h1><%= @step.order %> - <%= @step.name %></h1>
+<div class="garden-steps-main-container">
+<div class="garden_steps_banner">
+<h1><%= @step.name %></h1>
 </div>
 
-<div>
-  <% @tasks.each do |task| %>
-    <%= task.order %> - <%= task.name %> <br>
-    <%= task.description %>
-    <br>
-  <% end %>
-  <br>
+<div class="container-show">
+  <div
+  data-controller="tabs"
+  data-tabs-active-class="active"
+  data-tabs-default-tab-value="tab1">
+
+  <div class="nav-nav-tabs">
+    <button class="nav-link" id="tab1" data-tabs-target="btn" data-action="click->tabs#select">1</button>
+    <button class="nav-link" id="tab2" data-tabs-target="btn" data-action="click->tabs#select">2</button>
+    <button class="nav-link" id="tab3" data-tabs-target="btn" data-action="click->tabs#select">3</button>
+  </div>
+
+  <div class="rounded-lg categories">
+    <div data-tabs-target="tab" id="tab1" class="infos">
+      <% @tasks.order(1)%>
+      <div class= "infos-tech">
+      <p><%= @tasks[0].name %></p>
+      <p><%= @tasks[0].description %></p>
+      </div>
+    </div>
+
+    <div data-tabs-target="tab" id="tab2" class='hidden'>
+        <p><% @tasks.order(2)%></p>
+      <div class= "infos-tech">
+      <p><%= @tasks[1].name %></p>
+      <p><%= @tasks[1].description  %></p>
+      </div>
+    </div>
+
+      <div data-tabs-target="tab" id="tab3" class='hidden'>
+
+            <p><% @tasks.order(3)%></p>
+        <div class= "infos-tech">
+        <p><%= @tasks[2].name %></p>
+        <p><%=@tasks[2].description %></p>
+        </div>
+      </div>
+
+    </div>
 </div>
 
-<div>
+<div class="garden-steps-show-status">
  <%= simple_form_for(@garden_step) do |f| %>
     <div class="d-none">
     <%= f.input :status, input_html: {value: 0}%>
   </div>
-      <%= button_tag(type: 'submit', class: "btn btn-light border") do %>
-        <i class="icon-ok icon-white"></i> J'ai pas fini 😅
+      <%= button_tag(type: 'submit', class: "uncheck-step") do %>
+        <i class="fa-solid fa-xmark fa-2xl" style="color: #c02a39;"></i>
       <% end %>
   <% end %>
 <br>
@@ -28,8 +58,21 @@
     <div class="d-none">
       <%= f.input :status, input_html: {value: 1}%>
     </div>
-      <%= button_tag(type: 'submit', class: "btn btn-success border") do %>
-        <i class="icon-ok icon-white"></i> J'ai fini ! 💪
+      <%= button_tag(type: 'submit', class: "check-step") do %>
+        <i class="fa-solid fa-check fa-2xl" style="color: #0b4f30;"></i>
       <% end %>
     <% end %>
 </div>
+
+</div>
+
+
+
+<%# <div>
+  <% @tasks.each do |task| %>
+    <%# <%= task.order - <%= task.name %>
+    <%# <%= task.description %>
+    <%# <br>
+  <% end %>
+  <%# <br>
+</div> %>
