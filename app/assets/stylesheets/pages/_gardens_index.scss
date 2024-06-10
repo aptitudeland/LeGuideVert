@@ -58,6 +58,8 @@
   width: 100%;
   height: auto;
   display: block;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .garden-index-info {
@@ -76,7 +78,7 @@
 
 .delete-garden-button {
   font-size: 1.2em;
-  z-index: 2;
+  z-index: 1;
   color:#BCDD8C;
   // text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
 }

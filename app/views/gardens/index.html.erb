@@ -15,11 +15,11 @@
         <div class="garden-card">
           <div class="garden-index-picture-container">
             <% if garden.size == "Jardinière" %>
-              <%= image_tag "Garden-size/Size-1-Jardiniere.webp", alt: "Image d'une jardinière", class: "garden-index-picture" %>
+              <%= image_tag "garden_size/size_1_jardiniere.webp", alt: "Image d'une jardinière", class: "garden-index-picture" %>
             <% elsif garden.size == "Bac potager" %>
-              <%= image_tag "Garden-size/Size-2-Bac.jpeg", alt: "Image d'un bac potager", class: "garden-index-picture" %>
+              <%= image_tag "garden_size/size_2_bac.jpeg", alt: "Image d'un bac potager", class: "garden-index-picture" %>
             <% else garden.size == "potager partagé" %>
-              <%= image_tag "Garden-size/Size-3-Potager.webp", alt: "Image d'un potager", class: "garden-index-picture" %>
+              <%= image_tag "garden_size/size_3_potager.webp", alt: "Image d'un potager", class: "garden-index-picture" %>
             <% end %>
           </div>
           <div class="garden-index-info">
