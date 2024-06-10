@@ -1,15 +1,13 @@
 
 <div class="garden-index-main-container">
 
-  <div class= "new-garden-button">
-    <%= link_to new_garden_path do %>
-      <i class="fa-solid fa-circle-plus "></i>
-    <% end %>
-  </div>
+  <%= link_to new_garden_path do %>
+    <i class="fa-solid fa-circle-plus new-garden-button"></i>
+  <% end %>
 
-    <div class="garden-index-title-container">
-      <h1>Mes potagers</h1>
-    </div>
+  <div class="garden-index-title-container">
+    <h1>Mes potagers</h1>
+  </div>
 
   <% if @mygardens.empty? %>
     <div class="no-gardens-message">
