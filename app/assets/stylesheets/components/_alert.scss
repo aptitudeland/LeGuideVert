@@ -1,6 +1,15 @@
 .alert {
   position: fixed;
-  bottom: 16px;
-  right: 16px;
+  bottom: 40px;
+  right:auto;
+  left:auto;
+  z-index: 1000;
+}
+
+.alert-custom {
+  position: fixed;
+  bottom: 40px;
+  right:auto;
+  left:auto;
   z-index: 1000;
 }
