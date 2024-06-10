@@ -1,0 +1,8 @@
+<h1 class="titre-form">Créer un nouveau potager - Étape 1</h1>
+<div class="formulaire-du-potager">
+  <%= form_with model: @garden, url: next_step_gardens_path, method: :patch do |f| %>
+    <%= f.label :name, "Nom" %>
+    <%= f.text_field :name %>
+    <%= f.submit 'Suivant', name: 'next' %>
+  <% end %>
+</div>
