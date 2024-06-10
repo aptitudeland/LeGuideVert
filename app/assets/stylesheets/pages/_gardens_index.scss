@@ -80,13 +80,13 @@
 .delete-garden-button {
   font-size: 1.2em;
   z-index: 1;
-  color:#BCDD8C;
-  // text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
+  color:#6B952F;
+  // text-shadow: -1px -1px 0 #6B952F, 1px -1px 0 #6B952F, -1px 1px 0 #6B952F, 1px 1px 0 #6B952F;
 }
 
 .no-gardens-message {
   font-family: "Reenie Beanie", cursive;
-  font-size: 3vw;
+  font-size: 12vw;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -103,12 +103,3 @@
 .no-gardens-picture {
   max-width: 80%;
 }
-// .garden-info-title-trash {
-//   display: flex;
-//   flex-direction:row;
-//   // align-items:normal;
-//   position: relative;
-//   flex-wrap: wrap;
-//   justify-content: space-between;
-//   align-items: baseline
-// }
