@@ -14,6 +14,12 @@ Rails.application.routes.draw do
 
   resources :garden_steps, only: [:show, :edit, :update]
 
+  resources :garden_form_step, only: [:new, :create, :edit, :update], path: 'form_steps' do
+    member do
+      get :previous
+    end
+  end
+
 
   resources :gardens
   resources :steps, only: [:show]

@@ -1,18 +1,12 @@
 <%# <h1 class = "titre-form">Créer un nouveau potager</h1>
-<div class= 'formulaire-du-potager'>
-<%= form_with model: @garden do |f| %>
-  <%# <%= f.label :Nom %>
-  <%# <%= f.text_field :name %>
-  <%# <%= f.label :Adresse
-  <%# <%= f.text_field :address
-  <%# <%= f.label :Taille
-  <%# <%= f.select :size, options_for_select(['Jardinière', 'Bac potager', 'Potager partagé'])
-  <%# <%= f.label :Exposition
-  <%# <%= f.select :exposition, options_for_select(['Pas de soleil', 'Soleil le matin', 'Soleil le midi', 'Soleil en après-midi'])
-  <%# <%= f.submit  %>
-<%# <% end
-<%# </div> %>
-
-<div class= 'container'>
-<%= render 'form' %>
-</div>
+<div class= 'formulaire-du-potager'> %>
+<%= form_with(model: [@garden], url: gardens_path, method: :post) do |form| %>
+  <%= form.hidden_field :current_step, value: @current_step %>
+  <div data-controller="step-one">
+    <label>
+      Name:
+      <%= form.text_field :name %>
+    </label>
+    <button type="submit" data-action="submit">Next</button>
+  </div>
+<% end %>
