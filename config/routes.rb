@@ -3,6 +3,12 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :gardens do
+    collection do
+      patch 'next_step'
+    end
+  end
+  
+  resources :gardens do
     resources :garden_steps, only: [:create]
   end
 
