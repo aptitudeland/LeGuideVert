@@ -17,6 +17,10 @@
   color: white;
   align-items: center;
   text-shadow: 1px 1px 3px rgba(11, 79, 48, 0.2);
+
+  a:hover {
+    color: inherit;
+  }
 }
 
 .home {
