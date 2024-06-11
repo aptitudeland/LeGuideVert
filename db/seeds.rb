@@ -201,7 +201,7 @@ step2_1 = Step.create!(
   order: 1,
   name: "Préparer ma terre et acheter le nécessaire",
   description: "Pour une jardinière, la préparation du terrain
-  est assez succincte. Suivez les 2 tâches de l'étape.",
+  est assez succincte. Suivez les tâches de l'étape.",
   package: package2
 )
 file = File.open(Rails.root.join("app/assets/images/garden_pictures/preparer_terrain.png"))
@@ -219,7 +219,7 @@ step2_2.photo.attach(io: file, filename: "planter.png", content_type: "image/png
 
 step2_3 = Step.create!(
   order: 3,
-  name: "ÉSurveillance avant récolte",
+  name: "Surveillance avant récolte",
   description: "Cette étape vous donne les astuces de la surveillance des fruits,
   l'arrosage, et les temps avant récolte",
   package: package2
@@ -263,7 +263,7 @@ Task.create!(
   order: 1,
   name: "Plantons le framboisier ! ",
   description: "Du côté où vous avez à moitié rempli la jardinière, placez votre framboisier après l'avoir enlevé de
-  son pot. Mettez le terreau nécessaire pour récouvrir toutes les racines. Arrosez avec 1 grand verre d'eau. ",
+  son pot. Mettez le terreau nécessaire pour récouvrir toutes les racines.",
   step: step2_2
 )
 
@@ -274,16 +274,16 @@ Task.create!(
   Vos fraisiers ont besoin d'être plantés dans un trou qui
   fait la taille de leur pot. Chaque trou est écarté des autres par 10cms.
   Une fois les trous faits, enlevez chaque fraisier de son pot, placez le dans un trou et
-  refermez la terre sur ses racines, arrosez chaque fraisier avec un demi verre d'eau. ",
+  refermez la terre sur ses racines.",
   step: step2_2
 )
 
-# Task.create!(
-#   order: 3,
-#   name: "Tâche 2.2.3",
-#   description: "Description pour la tâche 2.2.3",
-# #   step: step2_2
-# )
+Task.create!(
+  order: 3,
+  name: "Arrosage à la plantation",
+  description: "Arrosez le framboisier avec 1 grand verre d'eau. Arrosez chaque fraisier avec un demi verre d'eau.",
+  step: step2_2
+)
 
 Task.create!(
   order: 1,

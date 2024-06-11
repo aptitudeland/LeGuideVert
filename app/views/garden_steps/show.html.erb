@@ -23,7 +23,10 @@
         <h3><%= @tasks[0].name %></h3>
         <h2><i class="fa-solid fa-trowel fa-2xl" style="color: #0b4e31;"></i></h2>
         <h5><%= @tasks[0].description %></h5>
-         <a href="https://www.lovethegarden.com/fr-fr/calculateur/terreau" target="_blank" class="button">Calcul terreau</a>
+          <% if @tasks[0].name == "Aller chercher du terreau"%>
+            <a href="https://www.lovethegarden.com/fr-fr/calculateur/terreau" target="_blank" class="button">Calcul terreau</a>
+            <% else %>
+          <% end %>
       </div>
     </div>
 
