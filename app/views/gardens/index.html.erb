@@ -1,15 +1,13 @@
 
 <div class="garden-index-main-container">
 
-  <div class= "new-garden-button">
-    <%= link_to new_garden_path do %>
-      <i class="fa-solid fa-circle-plus "></i>
-    <% end %>
-  </div>
+  <%= link_to new_garden_path do %>
+    <i class="fa-solid fa-circle-plus new-garden-button"></i>
+  <% end %>
 
-    <div class="garden-index-title-container">
-      <h1>Mes potagers</h1>
-    </div>
+  <div class="garden-index-title-container">
+    <h1>Mes potagers</h1>
+  </div>
 
   <% if @mygardens.empty? %>
     <div class="no-gardens-message">
@@ -32,14 +30,14 @@
               <% end %>
             </div>
             <div class="garden-index-info">
-              <h3><%= garden.name %></h3>
+              <h2><%= garden.name %></h2>
               <div class="garden-index-info-bottom-line">
               <p> <%= garden.size %> </p>
-                <div class="delete-garden-button">
+                <%# <div class="delete-garden-button">
                   <%= link_to  garden_path(garden), data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr?"} do %>
-                    <i class="fa fa-trash" aria-hidden="true"></i>
+                    <%#<i class="fa fa-trash" aria-hidden="true"></i>
                   <% end %>
-                </div>
+               <%# </div>%>
               </div>
             </div>
           </div>
