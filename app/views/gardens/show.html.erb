@@ -1,7 +1,11 @@
 <div class="garden-body">
   <div class="garden-category" >
-    <h2><%= @garden.name %></h2>
-    <div class="delete-button-card">
+    <div class="cover-img-garden" style="background-image: url('<%= cl_image_path(@garden.photo.key) %>');">
+      <div class="garden-name" >
+        <h2><%= @garden.name %></h2>
+    </div>
+  </div>
+     <div class="delete-button-card">
       <div class="delete-button">
         <%= link_to garden_path(@garden), data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr?"} do %>
           <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
