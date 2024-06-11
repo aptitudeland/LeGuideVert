@@ -4,27 +4,32 @@
   // align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+  height: 100%;
 
   h1 {
-    font-size: 2.5em;
-  }
+    font-size: 10vw;
+    text-align: center;
+    }
 }
 
 .new-garden-button {
-  font-size: 3em;
-  z-index: 2; /* Assure que l'élément est au-dessus des autres éléments */
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  background: #ffffff;
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, 0rem);
+  z-index: 2;
+  font-size: 4em;
+  color:#BCDD8C;
 }
 
 .garden-index-title-container {
-  display: flex;
-  // flex-direction:row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 100%; /* Assure que le conteneur occupe toute la largeur */
-  // display: flex;
-  // justify-content: space-between;
+  padding: 1rem
 }
 
 .gardens-index-cards-container {
@@ -33,40 +38,68 @@
 }
 
 .garden-card {
-
-  padding: 0.5em;
   border: solid 1px rgba(11, 79, 48, 0.24);
   margin-bottom: 2em;
   box-shadow: rgba(11, 79, 48, 0.24) 0px 3px 8px;
-  border-radius: 5px;
+  border-radius: 1rem;
   display: flex;
-  flex-direction:row;
-  // align-items: center;
+  flex-direction:column;
   flex-wrap: wrap;
   // justify-content: space-between;
   // width: 100%;
 }
 
-.garden-picture-container {
-  height: 50px;
-  width: 50px;
-  border: solid 1px rgba(11, 79, 48, 0.24);
+.garden-index-picture-container {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
 }
 
-.garden-info {
-  padding-left: 10px;
+.garden-index-picture {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
+.garden-index-info {
+  padding: 1rem 1rem 0rem;
+  width: auto;
+}
 
-.garden-info-title-trash {
+.garden-index-info-bottom-line {
   display: flex;
   flex-direction:row;
+  align-items: flex-end;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline
+  justify-content:space-between;
+  align-items:normal;
 }
 
 .delete-garden-button {
   font-size: 1.2em;
+  z-index: 1;
+  color:#6B952F;
+  // text-shadow: -1px -1px 0 #6B952F, 1px -1px 0 #6B952F, -1px 1px 0 #6B952F, 1px 1px 0 #6B952F;
+}
 
+.no-gardens-message {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 12vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.no-gardens-arrow {
+  max-width: 40%;
+  max-height: 32rem;
+}
+
+.no-gardens-picture {
+  max-width: 80%;
 }

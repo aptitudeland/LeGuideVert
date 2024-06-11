@@ -1,39 +1,36 @@
-<div class="garden-show">
-  <div class="garden-category">
-    <div class="garden-image">
+<div class="garden-category", >
+  <h2><%= @garden.name %></h2>
+  <div class="delete-button">
+    <%= link_to garden_path(@garden), data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr?"} do %>
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    <% end %>
+  </div>
+</div>
+
+<div class="step">
+  <% @garden_steps.each do |garden_step| %>
+    <div class="step-card">
+
+      <div class="step-image">
+        <%= cl_image_tag garden_step.step.photo.key, class: "img-card"   %>
+      </div>
+
+      <div class="step-card-info">
+        <h5>
+          Étape <%= garden_step.step.order %>
+        </h5>
+        <p>
+          <%= link_to garden_step.step.name, garden_step_path(garden_step) %>
+        </p>
+        <div class="status">
+          <strong><%= garden_step.status %></strong> <br>
+        </div>
+      </div>
 
     </div>
-      <h2><%= @garden.name %></h2>
-      <div class="delete-button">
-        <%= link_to garden_path(@garden), data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr?"} do%>
-          <i class="fa fa-trash" aria-hidden="true"></i>
-        <% end %>
-      </div>
-    </div>
-  </div>
-  <div class="garden-info-card">
-    <p class="garden-info">
-      <%= @garden.address %> <br>
-      taille: <%= @garden.size %> <br>
-      exposition: <%= @garden.exposition %> <br>
-    </p>
-  </div>
-  <div class="steps-card">
-    <div class="step-title">
-      <h3> Étapes :</h3>
-    </div>
-      <% @garden_steps.each do |garden_step| %>
-        <div class="step-card">
-          <p>
-            <strong><%= garden_step.step.order %> -</strong>
-            <%= link_to garden_step.step.name, garden_step_path(garden_step) %> <br>
-            <%= garden_step.step.description %> <br>
-          </p>
-            <strong><%= garden_step.status %></strong>
-        </div>
-      <% end %>
-  </div>
+  <% end %>
+</div>
+
   <div class="retour-button">
     <%= link_to 'Retour', gardens_path %> <br>
   </div>
-</div>

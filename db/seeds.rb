@@ -56,6 +56,8 @@ step1_1 = Step.create!(
   est assez succincte. Suivez les 2 tâches de l'étape.",
   package: package1
 )
+file = File.open(Rails.root.join("app/assets/images/garden_pictures/preparer_terrain.png"))
+step1_1.photo.attach(io: file, filename: "preparer_terrain.png", content_type: "image/png")
 
 step1_2 = Step.create!(
   order: 2,
@@ -64,6 +66,8 @@ step1_2 = Step.create!(
   tomates et oignons et semer les salades",
   package: package1
 )
+file = File.open(Rails.root.join("app/assets/images/garden_pictures/planter.png"))
+step1_2.photo.attach(io: file, filename: "planter.png", content_type: "image/png")
 
 step1_3 = Step.create!(
   order: 3,
@@ -72,6 +76,8 @@ step1_3 = Step.create!(
   l'arrosage, et les temps avant les récoltes",
   package: package1
 )
+file = File.open(Rails.root.join("app/assets/images/garden_pictures/surveiller.png"))
+step1_3.photo.attach(io: file, filename: "surveiller.png", content_type: "image/png")
 
 Task.create!(
   order: 1,
@@ -198,6 +204,8 @@ step2_1 = Step.create!(
   est assez succincte. Suivez les 2 tâches de l'étape.",
   package: package2
 )
+file = File.open(Rails.root.join("app/assets/images/garden_pictures/preparer_terrain.png"))
+step2_1.photo.attach(io: file, filename: "preparer_terrain.png", content_type: "image/png")
 
 step2_2 = Step.create!(
   order: 2,
@@ -206,6 +214,8 @@ step2_2 = Step.create!(
   vos fraisiers et votre framboisier",
   package: package2
 )
+file = File.open(Rails.root.join("app/assets/images/garden_pictures/planter.png"))
+step2_2.photo.attach(io: file, filename: "planter.png", content_type: "image/png")
 
 step2_3 = Step.create!(
   order: 3,
@@ -214,6 +224,8 @@ step2_3 = Step.create!(
   l'arrosage, et les temps avant récolte",
   package: package2
 )
+file = File.open(Rails.root.join("app/assets/images/garden_pictures/surveiller.png"))
+step2_3.photo.attach(io: file, filename: "surveiller.png", content_type: "image/png")
 
 # step2_4 = Step.create!(
 #   order: 4,
