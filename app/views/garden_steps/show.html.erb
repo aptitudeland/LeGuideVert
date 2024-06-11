@@ -8,9 +8,9 @@
     <div class="data-controller" data-controller="tabs" data-tabs-active-class="active" data-tabs-default-tab-value="tab1">
 
     <div class="nav-nav-tabs">
-      <button class="nav-link" id="tab1" data-tabs-target="btn" data-action="click->tabs#select">1</button>
-      <button class="nav-link" id="tab2" data-tabs-target="btn" data-action="click->tabs#select">2</button>
-      <button class="nav-link" id="tab3" data-tabs-target="btn" data-action="click->tabs#select">3</button>
+      <button class="nav-link" id="tab1" data-tabs-target="btn" data-action="click->tabs#select"><h4>1</h4></button>
+      <button class="nav-link" id="tab2" data-tabs-target="btn" data-action="click->tabs#select"><h4>2</h4></button>
+      <button class="nav-link" id="tab3" data-tabs-target="btn" data-action="click->tabs#select"><h4>3</h4></button>
     </div>
 
     <div class="rounded-lg categories">
@@ -49,11 +49,14 @@
         </div>
       </div>
     </div>
+    <div class= "filler-div">
+      <%# Div vide necessaire/ ne pas effacer %>
+    </div>
   </div>
 
     <div class="bottom-buttons-container">
 
-        <%= link_to gardens_path do %>
+        <%= link_to garden_path(@garden_step.garden) do %>
           <div class="btnback">
             <i class="fa-solid fa-arrow-left-long"></i>
           </div>
