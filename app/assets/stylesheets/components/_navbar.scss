@@ -30,8 +30,8 @@
   align-items: center;
 }
 
-.fa-house, a.dropdown-item {
-  // color:white;
+.dropdown-item {
+  color: #0b4f30;
 }
 
 .navbar-logo-container {
@@ -47,12 +47,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  line-height: 40px;
-  // border-radius: 50%;
+  font-size: 2rem;
   text-align: center;
+  // width: 2.5rem;
+  // height: 2.5rem;
+  // line-height: 40px;
+  // border-radius: 50%;
   // border-style: solid;
   // border-width: 2px;
-  font-size: 2rem;
 }
