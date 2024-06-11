@@ -7,10 +7,11 @@
 .nav-nav-tabs {
   // Style for the entire nav-tabs container
   border-bottom: 2px solid #ddd;
-  margin-bottom: 20px;
+  margin-bottom: 2em;
   border: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  flex-direction: row;
 
   .nav-link {
   border: 1px solid transparent;
