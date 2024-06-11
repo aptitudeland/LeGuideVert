@@ -18,11 +18,11 @@
   line-height: 70px;
   border-radius: 50%;
   text-align: center;
-  background: #ffffff;
   position: fixed;
   bottom: 1rem;
   left: 50%;
   transform: translate(-50%, 0rem);
+  background-color: white;
   z-index: 2;
   font-size: 4em;
   color:#BCDD8C;
@@ -81,8 +81,8 @@
 .delete-garden-button {
   font-size: 1.2em;
   z-index: 1;
-  color:#6B952F;
-  // text-shadow: -1px -1px 0 #6B952F, 1px -1px 0 #6B952F, -1px 1px 0 #6B952F, 1px 1px 0 #6B952F;
+  color:#BCDD8C;
+  text-shadow: 1px 1px 3px rgba(11, 79, 48, 0.1);
 }
 
 .no-gardens-message {
