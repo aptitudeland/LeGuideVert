@@ -19,31 +19,33 @@
     <div data-tabs-target="tab" id="tab1" class="infos">
       <% @tasks.order(1)%>
       <div class= "infos-tech">
-      <i class="fa-solid fa-shop fa-lg" style="color: #0b4f30;"></i>
-      <p><%= @tasks[0].name %></p>
-      <i class="fa-solid fa-trowel fa-lg" style="color: #0b4e31;"></i>
-      <p><%= @tasks[0].description %></p>
+        <h2><i class="fa-solid fa-shop fa-2xl" style="color: #0b4f30;"></i></h2>
+        <h3><%= @tasks[0].name %></h3>
+        <h2><i class="fa-solid fa-trowel fa-2xl" style="color: #0b4e31;"></i></h2>
+        <h5><%= @tasks[0].description %></h5>
+         <a href="https://www.lovethegarden.com/fr-fr/calculateur/terreau" target="_blank" class="button">Calcul terreau</a>
       </div>
     </div>
 
     <div data-tabs-target="tab" id="tab2" class='hidden'>
-        <p><% @tasks.order(2)%></p>
-      <div class= "infos-tech">
-      <i class="fa-light fa-dollar-sign" style="color: #0b4f30;"></i>
-      <p><%= @tasks[1].name %></p>
-      <p><%= @tasks[1].description  %></p>
-      </div>
+      <p><% @tasks.order(2)%></p>
+          <div class= "infos-tech">
+            <h2><i class="fa-solid fa-leaf fa-2xl"></i></h2>
+            <h3><%= @tasks[1].name %></h3>
+            <h2><i class="fa-solid fa-seedling fa-2xl"></i></h2>
+            <h5><%= @tasks[1].description  %></h5>
+          </div>
     </div>
 
       <div data-tabs-target="tab" id="tab3" class='hidden'>
-
-            <p><% @tasks.order(3)%></p>
-        <div class= "infos-tech">
-        <p><%= @tasks[2].name %></p>
-        <p><%=@tasks[2].description %></p>
-        </div>
+        <p><% @tasks.order(3)%></p>
+          <div class= "infos-tech">
+            <h2><i class="fa-solid fa-worm fa-2xl"></i></h2>
+            <h3><%= @tasks[2].name %></h3>
+            <h2><i class="fa-solid fa-trowel fa-2xl" style="color: #0b4e31;"></i></h2>
+            <h5><%=@tasks[2].description %></h5>
+          </div>
       </div>
-
     </div>
 </div>
 
