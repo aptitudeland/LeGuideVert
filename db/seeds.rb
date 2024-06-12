@@ -91,28 +91,34 @@ Task.create!(
   description: %(
   Le terreau est un substrat spécialement préparé pour fournir un environnement fertile aux plantes.
   Avant de s'en procurer, calculons la quantité nécessaire pour votre potager, selon la taille approximative de votre bac.
+  <br><br> Si vous voulez en savoir plus sur le terreau, voici une video pour vous:
   <iframe src="https://www.youtube.com/embed/dfrLTp6QvtI" title="Les terreaux" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  Cliquer sur le bouton ci-dessous afin d'accéder à l'outils de calcul.
+  <br>
+  <br> Cliquer sur le bouton ci-dessous afin d'accéder à l'outils de calcul.
   ),
   step: step1_1
 )
+
 Task.create!(
   order: 2,
   name: "Acheter le nécessaire pour les légumes",
   description: %(
   Rendez-vous en ligne ou dans un magasin de jardinage de votre choix
   pour acheter :
-  - 4 plants de tomates avec les variétés suivantes Roma, Montfavet, Flavio (vous pouvez mixer ou acheter une seule variété)
-  - 10 plants d'oignons jaunes ou rouges
-  - 1 sachet de graines de salades comprises dans celles qui aiment le soleil et supportent la chaleur : laitue romaine, laitue pommée, roquette
+  <br> - 4 plants de tomates avec les variétés suivantes Roma, Montfavet, Flavio (vous pouvez mixer ou acheter une seule
+   variété).
+  <br> - 10 plants d'oignons jaunes ou rouges.
+  <br> - 1 sachet de graines de salades comprises dans celles qui aiment le soleil et supportent la chaleur : laitue
+  romaine, laitue pommée, roquette.
   ),
   step: step1_1
 )
+
 Task.create!(
   order: 3,
   name: "Verser le terreau dans le bac",
   description: %(
-  Verser le terreau dans le bac et tasser avec votre pied au fur et à mesure
+  Verser le terreau dans le bac et tasser avec votre pied au fur et à mesure.
   ),
   step: step1_1
 )
@@ -121,10 +127,10 @@ Task.create!(
   order: 1,
   name: "Semons les salades ! ",
   description: %(
-  Sur une ligne de la largeur de votre bac, creusez avec votre doigt un sillon dans la terre
-  d'environ 1cm. Prenez un tas de graines du sachet dans votre main gauche et en faisant une pince pouce-index, prenez au fur
-  et à mesure des graines et placez les dans le sillon en essayant de ne pas faire de tas. Puis, refermez le sillon en remettant la terre sur
-  les graines.
+  Sur une ligne de la largeur de votre bac, creusez avec votre doigt un sillon dans la terre d'environ 1cm.
+  Prenez un tas de graines du sachet dans votre main gauche et en faisant une pince pouce-index, prenez au fur et à
+  mesure des graines et placez les dans le sillon en essayant de ne pas faire de tas. Puis, refermez le sillon en
+  remettant la terre sur les graines.
   ),
   step: step1_2
 )
@@ -133,12 +139,9 @@ Task.create!(
   order: 2,
   name: "Plantons les tomates ! ",
   description: %(
-  Faites autant de trous que de tomates achetées. Vos tomates ont besoin d'être plantées dans un trou qui
-  fait 2 fois leur volume de pot. Chaque trou est écarté des autres par 30cms.
-  Une fois les trous faits, enlevez chaque tomate de son pot, placez la dans un trou et
-  refermez la terre sur elle.
-  Une fois que tout est planté, vous pouvez arrosez les tomates avec l'équivalent d'un grand verre d'eau chacune. Les tomates
-  auront besoin d'un tuteur que vous pouvez acheter ou confectionner vous même.
+  Faites autant de trous que de tomates achetées. Vos tomates ont besoin d'être plantées dans un trou qui fait 2 fois leur volume de pot. Chaque trou est écarté des autres par 30cms.
+  Une fois les trous faits, enlevez chaque tomate de son pot, placez la dans un trou et refermez la terre sur elle.
+  Une fois que tout est planté, vous pouvez arrosez les tomates avec l'équivalent d'un grand verre d'eau chacune. Les tomates auront besoin d'un tuteur que vous pouvez acheter ou confectionner vous même.
   ),
   step: step1_2
 )
@@ -147,11 +150,9 @@ Task.create!(
   order: 3,
   name: "Plantons les oignons ! ",
   description: %(
-  Faites autant de trous que d'oignons achetés. Vos oignons ont besoin d'être plantés dans un trou qui
-  fait la taille de leur pot. Chaque trou est écarté des autres par 10cms.
-  Une fois les trous faits, enlevez chaque oignon de son pot, placez le dans un trou et
-  refermez la terre sur ses racines.
-  Une fois que tout est planté, pas besoin d'arroser l'oignon est un bulbe, il est auto-suffisant
+  Faites autant de trous que d'oignons achetés. Vos oignons ont besoin d'être plantés dans un trou qui fait la taille de leur pot. Chaque trou est écarté des autres par 10cms.
+  Une fois les trous faits, enlevez chaque oignon de son pot, placez le dans un trou et refermez la terre sur ses racines.
+  Une fois que tout est planté, pas besoin d'arroser l'oignon est un bulbe, il est auto-suffisant.
   ),
   step: step1_2
 )
@@ -171,9 +172,9 @@ Task.create!(
   name: "Arrosage",
   description: %(
   - Salades : Votre salade aura besoin d'un arrosage régulier que ce soit par vous ou par la pluie, le sol doit être humide au moins 1 jour sur 2.
-  - Tomates : La tomate a besoin d'être arrosé sur son pied et non sur ses feuilles. vous pouvez partir sur un arrosage de un verre d'eau par pied tous les 3 jours
+  <br>- Tomates : La tomate a besoin d'être arrosé sur son pied et non sur ses feuilles. vous pouvez partir sur un arrosage de un verre d'eau par pied tous les 3 jours
   sauf si le sol est humide.
-  - Oignons : L'oignon est facile à entretenir. Il est autosuffisant et rustique. Veillez à ce que son sol ne soit pas humide constamment car un risque de pourriture
+  <br>- Oignons : L'oignon est facile à entretenir. Il est autosuffisant et rustique. Veillez à ce que son sol ne soit pas humide constamment car un risque de pourriture
   serait alors son principal danger. Avoir un peu d'humidité est suffisant pour lui, s'il est planté pas trop loin de ses amies salades et tomates il profitera de leur arrosage.
   ),
   step: step1_3
@@ -185,8 +186,8 @@ Task.create!(
   description: %(
   - Oignons : A recolter environ 4 mois après votre plantation. Ne vous précipitez pas trop pour récolter vos oignons. Pas mûrs à point, ils ne se conserveront pas.
   Attendez que les fanes soient bien sèches et qu’elles aient pratiquement disparu.
-  - Tomates : vos tomates vont être produites au fur et à mesure environ 3 mois après votre plantation. Vos tomates peuvent produire jusqu'à l'automne si les températures le permettent.
-  - Salades : vos salades peuvent être récoltées petites, grosses et au fur et à mesure. Si vous souhaitez les éclaircir au fur et à mesure vous le pouvez mais ce n'est pas
+  <br>- Tomates : vos tomates vont être produites au fur et à mesure environ 3 mois après votre plantation. Vos tomates peuvent produire jusqu'à l'automne si les températures le permettent.
+  <br>- Salades : vos salades peuvent être récoltées petites, grosses et au fur et à mesure. Si vous souhaitez les éclaircir au fur et à mesure vous le pouvez mais ce n'est pas
   obligatoire. Elles supportant la densification et vous pouvez ainsi consommer les feuilles au fur et à mesure sans arracher une salade entière. Elles arriveront à pleine
   maturité environ 2 mois après leur semis (un mois si vous avez choisi la roquette).
   ),
@@ -268,7 +269,12 @@ Task.create!(
   order: 1,
   name: "Aller chercher du terreau",
   description: %(
-  Selon la taille approximatif de votre bac, achetez le nombre de litres de terreau nécessaire.
+  Le terreau est un substrat spécialement préparé pour fournir un environnement fertile aux plantes.
+  Avant de s'en procurer, calculons la quantité nécessaire pour votre potager, selon la taille approximative de votre bac.
+  <br><br> Si vous voulez en savoir plus sur le terreau, voici une video pour vous:
+  <iframe src="https://www.youtube.com/embed/dfrLTp6QvtI" title="Les terreaux" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <br>
+  <br> Cliquer sur le bouton ci-dessous afin d'accéder à l'outils de calcul.
   ),
   step: step2_1
 )
@@ -277,10 +283,9 @@ Task.create!(
   order: 2,
   name: "Acheter le nécessaire",
   description: %(
-  Rendez-vous en ligne ou dans un magasin de jardinage de votre choix
-  pour acheter :
-  - 4 plants de fraisiers avec les variétés suivantes mara des bois, pink panda, ou Alexandria, plus adaptés à l'ombre (vous pouvez mixer ou acheter une seule variété)
-  - 1 framboisier nain du type Little Sweet Sister, faites vous conseiller en magasin".
+  Rendez-vous en ligne ou dans un magasin de jardinage de votre choix pour acheter :
+  <br>- 4 plants de fraisiers avec les variétés suivantes mara des bois, pink panda, ou Alexandria, plus adaptés à l'ombre (vous pouvez mixer ou acheter une seule variété)
+  <br>- 1 framboisier nain du type Little Sweet Sister, faites vous conseiller en magasin.
   ),
   step: step2_1
 )
@@ -289,8 +294,7 @@ Task.create!(
   order: 3,
   name: "Verser le terreau dans la jardinière",
   description: %(
-  Verser le terreau dans la jardinière et tasser avec votre main. Laissez un côté de la
-  jardinière remplie seulement à la moitié sur 30 cm environ.
+  Verser le terreau dans la jardinière et tasser avec votre main. Laissez un côté de la jardinière remplie seulement à la moitié sur 30 cm environ.
   ),
   step: step2_1
 )
