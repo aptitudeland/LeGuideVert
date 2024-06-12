@@ -88,8 +88,10 @@ step1_3.photo.attach(io: file, filename: "surveiller.png", content_type: "image/
 Task.create!(
   order: 1,
   name: "Aller chercher du terreau",
-  description: "Selon la taille approximatif de votre bac, achetez le nombre de litres de terreau nécessaire.
-  Calculer la quantité de terreau nécessaire avec l'outil suivant :",
+  description: %Q{
+    <p>Selon la taille approximative de votre bac, achetez le nombre de litres de terreau nécessaire.<p>
+        <iframe width="867" height="488" src="https://www.youtube.com/embed/dfrLTp6QvtI" title="Les terreaux" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    },
   step: step1_1
 )
 Task.create!(

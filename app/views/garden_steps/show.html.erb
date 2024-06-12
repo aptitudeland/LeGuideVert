@@ -20,7 +20,7 @@
           <h2 class="pictogram"><i class="fa-solid fa-shop fa-2xl" style="color: #0b4f30;"></i></h2>
           <h3><%= @tasks[0].name %></h3>
           <h2 class="pictogram"><i class="fa-solid fa-trowel fa-2xl" style="color: #0b4e31;"></i></h2>
-          <p><%= @tasks[0].description %></p>
+          <p><%= @tasks[0].description.html_safe %></p>
             <% if @tasks[0].name == "Aller chercher du terreau"%>
               <a href="https://www.lovethegarden.com/fr-fr/calculateur/terreau" target="_blank" class="btn-green-filled">Calcul terreau</a>
               <% else %>
