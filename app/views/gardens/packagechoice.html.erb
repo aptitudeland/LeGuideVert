@@ -1,4 +1,3 @@
-<%= link_to 'Retour', new_garden_path %>
 <h2>Package Choice</h2>
 
   <div class="package-choice-container">
@@ -18,7 +17,13 @@
                 </div>
               <% end %>
             <% end %>
-          <%= f.submit value: "Valider" %>
-        <% end %>
+            <%= f.submit value: "Valider" %>
+          <% end %>
       </div>
   </div>
+
+ <%= link_to new_garden_path do %>
+  <div class="btnback return-button-packages">
+    <i class="fa-solid fa-arrow-left-long"></i>
+  </div>
+ <% end %>
