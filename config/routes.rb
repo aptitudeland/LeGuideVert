@@ -2,11 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
 
-  resources :garden_form, only: [:create], as: :garden_form do
+  resources :garden_form, only: [:update], as: :garden_form do
     get :step1, on: :collection
-    post :step2, on: :collection
-    post :step3, on: :collection
-    post :step4, on: :collection
+    patch :step2, on: :collection
+    patch :step3, on: :collection
+    patch :step4, on: :collection
   end
 
 

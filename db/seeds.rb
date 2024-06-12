@@ -24,6 +24,8 @@ garden1 = Garden.create!(
   address: "43, boulevard Stalingrad, Nantes, France",
   user_id: 1
 )
+file = File.open(Rails.root.join("app/assets/images/garden_size/size_2_bac.jpeg"))
+garden1.photo.attach(io: file, filename: "size_2_bac.jpeg", content_type: "image/jpeg")
 
 garden2 = Garden.create!(
   name: "Mon magnifique balcon",
@@ -32,6 +34,8 @@ garden2 = Garden.create!(
   address: "43, boulevard Stalingrad, Nantes, France",
   user_id: 1
 )
+file = File.open(Rails.root.join("app/assets/images/garden_size/size_1_jardiniere.webp"))
+garden2.photo.attach(io: file, filename: "size_1_jardiniere.webp", content_type: "image/webp")
 
 garden3 = Garden.create!(
   name: "Le potager partagé",
@@ -40,6 +44,8 @@ garden3 = Garden.create!(
   address: "4, rue de la Moutonnerie, Nantes, France",
   user_id: 1
 )
+file = File.open(Rails.root.join("app/assets/images/garden_size/size_3_potager.webp"))
+garden3.photo.attach(io: file, filename: "size_3_potager", content_type: "image/webp")
 
 puts "Creating packages with steps and tasks"
 package1 = Package.create!(
@@ -82,7 +88,8 @@ step1_3.photo.attach(io: file, filename: "surveiller.png", content_type: "image/
 Task.create!(
   order: 1,
   name: "Aller chercher du terreau",
-  description: "Selon la taille approximatif de votre bac, achetez le nombre de litres de terreau nécessaire.",
+  description: "Selon la taille approximatif de votre bac, achetez le nombre de litres de terreau nécessaire.
+  Calculer la quantité de terreau nécessaire avec l'outil suivant :",
   step: step1_1
 )
 Task.create!(
