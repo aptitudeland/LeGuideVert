@@ -3,7 +3,6 @@ class GardensController < ApplicationController
 # :update dans only si retour a la normal
 
   def create
-    raise
     @garden = Garden.new(garden_params)
     @garden.user = current_user
     @garden.save
@@ -38,12 +37,10 @@ class GardensController < ApplicationController
   end
 
   def edit
-    raise
     case @garden.current_step
     when 1
       render :step1
     when 2
-      raise
       render :step2
     when 3
       render :step3
