@@ -88,10 +88,12 @@ step1_3.photo.attach(io: file, filename: "surveiller.png", content_type: "image/
 Task.create!(
   order: 1,
   name: "Aller chercher du terreau",
-  description: %Q{
-    <p>Selon la taille approximative de votre bac, achetez le nombre de litres de terreau nécessaire.<p>
-        <iframe width="867" height="488" src="https://www.youtube.com/embed/dfrLTp6QvtI" title="Les terreaux" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    },
+  description: %(
+    Le terreau est un substrat spécialement préparé pour fournir un environnement fertile aux plantes.
+    Avant de s'en procurer, calculons la quantité nécessaire pour votre potager, selon la taille approximative de votre bac.
+    <iframe src="https://www.youtube.com/embed/dfrLTp6QvtI" title="Les terreaux" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    Cliquer sur le bouton ci-dessous afin d'accéder à l'outils de calcul.
+  ),
   step: step1_1
 )
 Task.create!(
