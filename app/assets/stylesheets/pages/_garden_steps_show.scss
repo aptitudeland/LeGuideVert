@@ -43,6 +43,16 @@
     font-size: 1.1rem;
   }
 
+  iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5em;
+    border: solid 1px #BCDD8C;
+    box-shadow: 1px 1px 3px #BCDD8C;
+    margin-top: 1em;
+    background-color: #BCDD8C;
+  }
+
   .button {
     display: inline-block;
     padding: 10px 20px;
