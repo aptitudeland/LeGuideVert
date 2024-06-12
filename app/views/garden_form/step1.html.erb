@@ -1,10 +1,27 @@
-<h1 class="titre-form">Créer un nouveau potager - Étape 1</h1>
-<div class="formulaire-du-potager">
+<div class="create-step-body">
+  <div class="formular-title">
+    <h1>Donnez un petit nom à votre potager</h1>
+  </div>
+  <div class="formulaire-du-potager">
+    <%= form_for @garden, data: {turbo: false}, url: step2_garden_form_index_path do |f| %>
+      <%#<%= f.label :Nom %>
+      <%= f.text_field :name %>
+      <%#<%= f.submit 'Next' %>
+    <% end %>
+  </div>
+  <p class="description-name">Donnez lui un nom sympa comme mon pote à moi ou Boustiflor</p>
+  <%= image_tag "garden_create/step_1.png", class: "image-photo" %>
 
-<%= form_for @garden, data: {turbo: false}, url: step2_garden_form_index_path do |f| %>
-  <%= f.label :Nom %>
-  <%= f.text_field :name %>
-
-  <%= f.submit 'Next' %>
-<% end %>
+  <div class="create-step-foot-container">
+    <%= link_to gardens_path do %>
+      <div class="btnback">
+      <i class="fa-solid fa-arrow-left-long"></i>
+      </div>
+    <% end %>
+    <%= link_to step2_garden_form_index_path do %>
+      <div class="btnback">
+        <i class="fa-solid fa-check"></i>
+      </div>
+    <% end %>
+  </div>
 </div>
