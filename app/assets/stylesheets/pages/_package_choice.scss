@@ -1,4 +1,14 @@
 .package-choice-container {
+
+
+  form{
+    display: flex;
+    height: 30rem;
+    gap: 130px;
+
+  }
+
+
   h2{
     padding: 0.3em;
     text-align: center;
@@ -36,15 +46,18 @@
   display: flex;
   color: #0b4f30;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   margin: .5rem;
   border-radius: 1rem;
+  height: 25rem;
+  width: 20rem;
 
     img{
-      height: 100%;
-      width: 120px;
+      height: 65%;
+      width: 100%;
+      -o-object-fit: cover;
       object-fit: cover;
-      margin: .5rem;
+
     }
 
     h2{
@@ -53,25 +66,30 @@
       margin: 0;
     }
 
-    p{
-      font-size: 12px;
-      line-height: 1.4;
-      opacity: .7;
-      margin-bottom: 0;
-      margin-top: 8px;
     }
-  }
 
-  .package-choice-iteration-card-infos {
-    overflow: hidden;
-    // background: #f8f9fa;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    display: flex;
-    color: #0b4f30;
-    align-items: center;
-    flex-direction: column;
-    padding: .5rem;
+    .package-choice-iteration-card-infos {
+      overflow: hidden;
+      // background: #f8f9fa;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      display: flex;
+      color: #0b4f30;
+      align-items: center;
+      flex-direction: column;
+      padding: .5rem;
+      width: fit-content;
+      word-wrap: break-word;
+      height: -webkit-fill-available;
 
+      p{
+        font-size: 12px;
+        line-height: 1.4;
+        opacity: .7;
+        margin-bottom: 0;
+        margin-top: 8px;
+        word-wrap: break-word;
+        white-space: break-spaces;
+      }
     }
 
     .package-choice-radio-button{
@@ -91,13 +109,13 @@
     }
 
     .scroll-container {
-      width: 100%;
-      overflow-x: auto; /* Active le scroll horizontal */
-      white-space: nowrap; /* Évite que les éléments passent à la ligne suivante */
+      display: flex;
+      width: max-content;
     }
 
     .scroll-content {
-      display: inline-block;
+      overflow: scroll;
+      width: 93vw;
     }
     .item {
       display: inline-block; /* Les éléments sont alignés horizontalement */
@@ -107,5 +125,3 @@
       text-align: center; /* Centrer le texte */
       vertical-align: top; /* Aligner les éléments en haut */
     }
-
-  
