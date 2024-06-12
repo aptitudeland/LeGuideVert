@@ -1,8 +1,6 @@
-<h2>Package Choice</h2>
-
 <div class="package-choice-container">
   <h2>Choix de votre kit potager</h2>
-  <h3>Pour "<%=@garden.name%>" nous vous proposons 4 kits : </h3>
+  <h3>Pour "<%=@garden.name%>" choisissez votre kit parmi 4 propositions : </h3>
     <div class="scroll-content">
       <div class="scroll-container">
         <div class="package-choice-iteration-container">
@@ -25,13 +23,16 @@
         </div>
       </div>
     </div>
-              <%= f.submit value: "Valider" %>
-            <% end %>
 </div>
 
-
-<%= link_to new_garden_path do %>
-  <div class="btnback return-button-packages">
-    <i class="fa-solid fa-arrow-left-long"></i>
-  </div>
- <% end %>
+<div class="package-choice-bottom-buttons-container">
+  <%= link_to new_garden_path do %>
+    <div class="btnback">
+      <i class="fa-solid fa-arrow-left-long"></i>
+    </div>
+  <% end %>
+  <%= button_tag :submit, class:"btnback" do%>
+    <i class="fa-solid fa-check"></i>
+  <% end %>
+<% end %>
+ </div>
