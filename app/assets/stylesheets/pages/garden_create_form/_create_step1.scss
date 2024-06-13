@@ -4,7 +4,7 @@
   height: 85vh;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
   padding-bottom: 2em;
@@ -24,10 +24,17 @@
 }
 
 .radio-buttons .content-radio-button {
+  // cursor: pointer; /* Change le curseur pour indiquer que la zone est cliquable */
   display: block;
   background-color: white;
-  padding: 10px;
+  padding: 1em;
   margin-bottom: 5px;
+  border-radius: 10px;
+  margin:1em;
+  font-size: 1rem;
+}
+.radio-button-to-shrink {
+  // transform: scale(0);
 }
 
 .radio-buttons .content-radio-button:hover {
@@ -37,7 +44,7 @@
 
 .radio-buttons .content-radio-button label {
   display: inline-block;
-  margin-left: 10px;
+  padding-right: 1em;
 }
 
 /*#edit_garden {
@@ -54,7 +61,7 @@
 }
 
 .image-photo-step3 {
-  width: 70%;
+  width: 50%;
 }
 
 .image-photo-step4 {

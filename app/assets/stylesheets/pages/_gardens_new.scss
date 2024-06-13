@@ -9,8 +9,8 @@
 .formulaire-du-potager {
   //max-width: 400px; /* Largeur maximale du formulaire */
   margin: 0 auto; /* Centrer le formulaire horizontalement */
-  padding: 20px; /* Espacement intérieur */
-  border-radius: 20px; /* Coins arrondis */
+  padding: 1em; /* Espacement intérieur */
+  border-radius: 1em; /* Coins arrondis */
   background-color: #E7F4DA; /* Couleur de fond */
 }
 
@@ -22,8 +22,6 @@
 
 .formulaire-du-potager label {
   //display: inline; /* Afficher les labels sur une ligne différente */
-  margin-top: 10px; /* Espacement entre les labels */
-
 }
 
 .formulaire-du-potager input[type="text"],
