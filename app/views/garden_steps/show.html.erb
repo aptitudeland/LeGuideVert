@@ -56,29 +56,28 @@
 
     <div class="bottom-buttons-container">
 
-        <%= link_to garden_path(@garden_step.garden) do %>
-          <div class="btnback">
-            <i class="fa-solid fa-arrow-left-long"></i>
-          </div>
+      <%= link_to garden_path(@garden_step.garden) do %>
+        <div class="btnback">
+          <i class="fa-solid fa-arrow-left-long"></i>
+        </div>
+      <% end %>
+
+      <%= simple_form_for(@garden_step) do |f| %>
+        <div class="d-none">
+          <%= f.input :status, input_html: {value: 0}%>
+        </div>
+        <%= button_tag(type: 'submit', class: "btnback") do %>
+          <i class="fa-regular fa-hourglass-half"></i>
         <% end %>
+      <% end %>
 
-          <%= simple_form_for(@garden_step) do |f| %>
-            <div class="d-none">
-            <%= f.input :status, input_html: {value: 0}%>
-            </div>
-            <%= button_tag(type: 'submit', class: "btnback") do %>
-              <i class="fa-regular fa-hourglass-half"></i>
-            <% end %>
+      <%= simple_form_for(@garden_step) do |f| %>
+        <div class="d-none">
+          <%= f.input :status, input_html: {value: 1}%>
+        </div>
+          <%= button_tag(type: 'submit', class: "btnback") do %>
+            <i class="fa-solid fa-check"></i>
           <% end %>
-
-          <%= simple_form_for(@garden_step) do |f| %>
-            <div class="d-none">
-              <%= f.input :status, input_html: {value: 1}%>
-            </div>
-              <%= button_tag(type: 'submit', class: "btnback") do %>
-                <i class="fa-solid fa-check"></i>
-              <% end %>
-          <% end %>
-
-      </div>
+      <% end %>
+    </div>
  </div>
