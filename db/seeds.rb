@@ -91,28 +91,33 @@ Task.create!(
   description: %(
   Le terreau est un substrat spécialement préparé pour fournir un environnement fertile aux plantes.
   Avant de s'en procurer, calculons la quantité nécessaire pour votre potager, selon la taille approximative de votre bac.
+  <br><br> Si vous voulez en savoir plus sur le terreau, voici une video pour vous:
   <iframe src="https://www.youtube.com/embed/dfrLTp6QvtI" title="Les terreaux" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  Cliquer sur le bouton ci-dessous afin d'accéder à l'outils de calcul.
+  <br>
+  <br> Cliquer sur le bouton ci-dessous afin d'accéder à l'outils de calcul.
   ),
   step: step1_1
 )
+
 Task.create!(
   order: 2,
   name: "Acheter le nécessaire pour les légumes",
   description: %(
-  Rendez-vous en ligne ou dans un magasin de jardinage de votre choix
-  pour acheter :
-  - 4 plants de tomates avec les variétés suivantes Roma, Montfavet, Flavio (vous pouvez mixer ou acheter une seule variété)
-  - 10 plants d'oignons jaunes ou rouges
-  - 1 sachet de graines de salades comprises dans celles qui aiment le soleil et supportent la chaleur : laitue romaine, laitue pommée, roquette
+  Rendez-vous en ligne ou dans un magasin de jardinage de votre choix pour acheter :\n
+   - 4 plants de tomates avec les variétés suivantes Roma, Montfavet, Flavio (vous pouvez mixer ou acheter une seule
+   variété).
+  \n - 10 plants d'oignons jaunes ou rouges.
+  \n - 1 sachet de graines de salades comprises dans celles qui aiment le soleil et supportent la chaleur : laitue
+  romaine, laitue pommée, roquette.
   ),
   step: step1_1
 )
+
 Task.create!(
   order: 3,
   name: "Verser le terreau dans le bac",
   description: %(
-  Verser le terreau dans le bac et tasser avec votre pied au fur et à mesure
+  Verser le terreau dans le bac et tasser avec votre pied au fur et à mesure.
   ),
   step: step1_1
 )
@@ -187,8 +192,8 @@ Task.create!(
   description: %(
   - Oignons : A recolter environ 4 mois après votre plantation. Ne vous précipitez pas trop pour récolter vos oignons. Pas mûrs à point, ils ne se conserveront pas.
   Attendez que les fanes soient bien sèches et qu’elles aient pratiquement disparu.
-  - Tomates : vos tomates vont être produites au fur et à mesure environ 3 mois après votre plantation. Vos tomates peuvent produire jusqu'à l'automne si les températures le permettent.
-  - Salades : vos salades peuvent être récoltées petites, grosses et au fur et à mesure. Si vous souhaitez les éclaircir au fur et à mesure vous le pouvez mais ce n'est pas
+  <br>- Tomates : vos tomates vont être produites au fur et à mesure environ 3 mois après votre plantation. Vos tomates peuvent produire jusqu'à l'automne si les températures le permettent.
+  <br>- Salades : vos salades peuvent être récoltées petites, grosses et au fur et à mesure. Si vous souhaitez les éclaircir au fur et à mesure vous le pouvez mais ce n'est pas
   obligatoire. Elles supportant la densification et vous pouvez ainsi consommer les feuilles au fur et à mesure sans arracher une salade entière. Elles arriveront à pleine
   maturité environ 2 mois après leur semis (un mois si vous avez choisi la roquette).
   ),
@@ -270,7 +275,12 @@ Task.create!(
   order: 1,
   name: "Aller chercher du terreau",
   description: %(
-  Selon la taille approximatif de votre bac, achetez le nombre de litres de terreau nécessaire.
+  Le terreau est un substrat spécialement préparé pour fournir un environnement fertile aux plantes.
+  Avant de s'en procurer, calculons la quantité nécessaire pour votre potager, selon la taille approximative de votre bac.
+  <br><br> Si vous voulez en savoir plus sur le terreau, voici une video pour vous:
+  <iframe src="https://www.youtube.com/embed/dfrLTp6QvtI" title="Les terreaux" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <br>
+  <br> Cliquer sur le bouton ci-dessous afin d'accéder à l'outils de calcul.
   ),
   step: step2_1
 )
