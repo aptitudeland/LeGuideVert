@@ -103,12 +103,11 @@ Task.create!(
   order: 2,
   name: "Acheter le nécessaire pour les légumes",
   description: %(
-  Rendez-vous en ligne ou dans un magasin de jardinage de votre choix
-  pour acheter :
-  <br> - 4 plants de tomates avec les variétés suivantes Roma, Montfavet, Flavio (vous pouvez mixer ou acheter une seule
+  Rendez-vous en ligne ou dans un magasin de jardinage de votre choix pour acheter :\n
+   - 4 plants de tomates avec les variétés suivantes Roma, Montfavet, Flavio (vous pouvez mixer ou acheter une seule
    variété).
-  <br> - 10 plants d'oignons jaunes ou rouges.
-  <br> - 1 sachet de graines de salades comprises dans celles qui aiment le soleil et supportent la chaleur : laitue
+  \n - 10 plants d'oignons jaunes ou rouges.
+  \n - 1 sachet de graines de salades comprises dans celles qui aiment le soleil et supportent la chaleur : laitue
   romaine, laitue pommée, roquette.
   ),
   step: step1_1
@@ -125,7 +124,7 @@ Task.create!(
 
 Task.create!(
   order: 1,
-  name: "Semons les salades ! ",
+  name: "Semons les salades !",
   description: %(
   Sur une ligne de la largeur de votre bac, creusez avec votre doigt un sillon dans la terre d'environ 1cm.
   Prenez un tas de graines du sachet dans votre main gauche et en faisant une pince pouce-index, prenez au fur et à
