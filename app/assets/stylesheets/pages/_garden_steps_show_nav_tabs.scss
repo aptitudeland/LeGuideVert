@@ -10,8 +10,9 @@
   margin-bottom: 2em;
   border: none;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: row;
+  flex-wrap: nowrap;
 
   .nav-link {
     display: flex;
@@ -36,9 +37,10 @@
 
     &.active {
       color: white;
-      background-color: #0b4f30;
+      background-color: #BCDD8C;
       border: solid;
-      border-color: #ddd #ddd #fff;
+      border-color: #0b4f30;
+      text-shadow: 1px 1px 1px rgba(11, 79, 48, 0.4);
     }
   }
 }
