@@ -1,9 +1,39 @@
-<h1 class="titre-form">Créer un nouveau potager - Étape 2</h1>
-<div class="formulaire-du-potager">
+<div class="create-step-body">
+  <div class="formular-title">
+    <h2>Quelle va être la taille de votre petit coin de paradis ?</h2>
+  </div>
+  <div class="formulaire-du-potager">
+    <%= form_for @garden, data: {turbo: false}, url: step3_garden_form_index_path do |f| %>
+      <div class="radio-buttons">
+        <div class="content-radio-button">
+          <%= f.radio_button :size, 'Jardinière', class: '' %>
+          <%= f.label :size, 'Jardinière' %>
+        </div>
 
-<%= form_with model: @garden, data: {turbo: false}, url: step3_garden_form_index_path do |f| %>
-  <%= f.label :Taille %>
-  <%= f.select :size, ['Jardinière', 'Bac potager', 'Potager partagé'] %>
-  <%= f.submit 'Next' %>
-<% end %>
+        <div class="content-radio-button">
+          <%= f.radio_button :size, 'Bac potager' %>
+          <%= f.label :size, 'Bac potager' %>
+        </div>
+
+        <div class="content-radio-button">
+          <%= f.radio_button :size, 'Potager partagé' %>
+          <%= f.label :size, 'Potager partagé' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <p class="description-name">Nous avons besoin de la taille de votre futur potager afin d’optimiser au mieux les plantes choisies.</p>
+  <%= image_tag "garden_create/step_2_size.png", class: "image-photo-step2" %>
+
+  <div class="create-step-foot-container">
+    <%= link_to step1_garden_form_index_path do %>
+      <div class="btnback">
+        <i class="fa-solid fa-arrow-left-long"></i>
+      </div>
+    <% end %>
+
+    <%= button_tag :submit, form: "edit_garden_#{@garden.id}", class: "btnback", data: {turbo_method: :patch} do %>
+      <i class="fa-solid fa-check"></i>
+    <% end %>
+  </div>
 </div>

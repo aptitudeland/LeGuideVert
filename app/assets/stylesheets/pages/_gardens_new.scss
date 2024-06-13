@@ -7,11 +7,11 @@
 }
 
 .formulaire-du-potager {
-  max-width: 400px; /* Largeur maximale du formulaire */
+  //max-width: 400px; /* Largeur maximale du formulaire */
   margin: 0 auto; /* Centrer le formulaire horizontalement */
   padding: 20px; /* Espacement intérieur */
   border-radius: 20px; /* Coins arrondis */
-  background-color: #f0f0f0; /* Couleur de fond */
+  background-color: #E7F4DA; /* Couleur de fond */
 }
 
 .titre-form {
@@ -21,8 +21,9 @@
 }
 
 .formulaire-du-potager label {
-  display: block; /* Afficher les labels sur une ligne différente */
+  //display: inline; /* Afficher les labels sur une ligne différente */
   margin-top: 10px; /* Espacement entre les labels */
+
 }
 
 .formulaire-du-potager input[type="text"],
