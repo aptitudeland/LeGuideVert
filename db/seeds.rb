@@ -159,10 +159,12 @@ Task.create!(
 Task.create!(
   order: 1,
   name: "Surveillance",
-  description: %(Durant la vie de vos légumes et fruits, il vous faudra surveiller leur évolution au moins 3 fois par semaine. Les oignons nécessitent
+  description: %(
+  Durant la vie de vos légumes et fruits, il vous faudra surveiller leur évolution au moins 3 fois par semaine. Les oignons nécessitent
   très peu de soin, ils sont autosuffisants. Sur les tomates, il vous faudra enlever les gourmands qui poussent entre le tronc et les branches.
   Les salades nécessitent surtout de la surveillance pour ne pas être mangé dès leur premier stade par les limaces ou les escargots. Le plus efficace demeure de chasser les gastéropodes à la tombée de
-  la nuit mais vous pouvez aussi acheter des produits en magasin de jardinage.),
+  la nuit mais vous pouvez aussi acheter des produits en magasin de jardinage.
+  ),
   step: step1_3
 )
 
