@@ -118,6 +118,7 @@ Task.create!(
   name: "Verser le terreau dans le bac",
   description: %(
   Verser le terreau dans le bac et tasser avec votre pied au fur et à mesure.
+  Et c'est bon, vous êtes prêt(e) pour la prochaine étape !
   ),
   step: step1_1
 )
@@ -126,7 +127,7 @@ Task.create!(
   order: 1,
   name: "Semons les salades ! ",
   description: %(
-  Sur une ligne de la largeur de votre bac, creusez avec votre doigt un sillon dans la terre
+  Creusez avec votre doigt un sillon dans la terre sur toute la largeur de votre bac.
   d'environ 1cm. Prenez un tas de graines du sachet dans votre main gauche et en faisant une pince pouce-index, prenez au fur
   et à mesure des graines et placez les dans le sillon en essayant de ne pas faire de tas. Puis, refermez le sillon en remettant la terre sur
   les graines.
@@ -138,8 +139,8 @@ Task.create!(
   order: 2,
   name: "Plantons les tomates ! ",
   description: %(
-  Faites autant de trous que de tomates achetées. Vos tomates ont besoin d'être plantées dans un trou qui
-  fait 2 fois leur volume de pot. Chaque trou est écarté des autres par 30cms.
+  Vos tomates ont besoin d'être plantées dans un trou qui
+  fait 2 fois leur volume de pot. Faites autant de trous que de tomates achetées. Chaque trou est écarté des autres par 30cms.
   Une fois les trous faits, enlevez chaque tomate de son pot, placez la dans un trou et
   refermez la terre sur elle.
   Une fois que tout est planté, vous pouvez arrosez les tomates avec l'équivalent d'un grand verre d'eau chacune. Les tomates
@@ -153,8 +154,8 @@ Task.create!(
   name: "Plantons les oignons ! ",
   description: %(
   Faites autant de trous que d'oignons achetés. Vos oignons ont besoin d'être plantés dans un trou qui
-  fait la taille de leur pot. Chaque trou est écarté des autres par 10cms.
-  Une fois les trous faits, enlevez chaque oignon de son pot, placez le dans un trou et
+  fait la taille de leur pot. Chaque trou est écarté des autres de 10cms.
+  Une fois les trous faits, enlevez chaque plant oignon de son pot, placez le dans un trou et
   refermez la terre sur ses racines.
   Une fois que tout est planté, pas besoin d'arroser l'oignon est un bulbe, il est auto-suffisant
   ),
@@ -167,6 +168,10 @@ Task.create!(
   description: %(
   Durant la vie de vos légumes et fruits, il vous faudra surveiller leur évolution au moins 3 fois par semaine. Les oignons nécessitent
   très peu de soin, ils sont autosuffisants. Sur les tomates, il vous faudra enlever les gourmands qui poussent entre le tronc et les branches.
+  <br><br> C'est quoi un groumand? voici une video pour vous:
+  <iframe src="https://www.youtube.com/embed/Yo5aNwMIgfs" title="Gourmands de tomate, les tailler ou pas ?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <br>
+  <br>
   Les salades nécessitent surtout de la surveillance pour ne pas être mangé dès leur premier stade par les limaces ou les escargots. Le plus efficace demeure de chasser les gastéropodes à la tombée de
   la nuit mais vous pouvez aussi acheter des produits en magasin de jardinage.
   ),
@@ -292,7 +297,7 @@ Task.create!(
   Rendez-vous en ligne ou dans un magasin de jardinage de votre choix
   pour acheter :
   - 4 plants de fraisiers avec les variétés suivantes mara des bois, pink panda, ou Alexandria, plus adaptés à l'ombre (vous pouvez mixer ou acheter une seule variété)
-  - 1 framboisier nain du type Little Sweet Sister, faites vous conseiller en magasin".
+  - 1 framboisier nain du type Little Sweet Sister, faites vous conseiller en magasin.
   ),
   step: step2_1
 )
@@ -303,6 +308,7 @@ Task.create!(
   description: %(
   Verser le terreau dans la jardinière et tasser avec votre main. Laissez un côté de la
   jardinière remplie seulement à la moitié sur 30 cm environ.
+  Et c'est bon, vous êtes prêt(e) pour la prochaine étape !
   ),
   step: step2_1
 )
@@ -311,7 +317,7 @@ Task.create!(
   order: 1,
   name: "Plantons le framboisier ! ",
   description: %(
-  Du côté où vous avez à moitié rempli la jardinière, placez votre framboisier après l'avoir enlevé de son pot. Mettez le terreau nécessaire pour récouvrir toutes les racines.
+  Du côté où vous avez à moitié rempli la jardinière, placez votre framboisier après l'avoir enlevé de son pot. Mettez le terreau nécessaire pour recouvrir toutes les racines.
   ),
   step: step2_2
 )
@@ -343,7 +349,7 @@ Task.create!(
   Durant la vie de vos fruits,
   il vous faudra surveiller leur évolution au moins 2 fois par semaine.
   Les framboisiers et fraisiers demandent peu d'entretien et ont peu de prédateurs
-  citadins (à part les humains bien sur :-) Regardez les pousser et surtout surveillez l'humidité
+  citadins (à part les humains bien sur :-) Regardez les pousser et surtout surveillez l'humidité.
   ),
   step: step2_3
 )
@@ -352,8 +358,8 @@ Task.create!(
   order: 2,
   name: "Arrosage",
   description: %(
-  - Fraisiers : vos fraisiers auront besoin d'un arrosage régulier que ce soit par vous ou par la pluie, le terreau doit être humide au moins 1 jour sur 3.
-  - Framboisier : votre framboisier aura besoin d'un arrosage régulier que ce soit par vous ou par la pluie, le terreau doit être humide au moins 1 jour sur 4.
+  Fraisiers : vos fraisiers auront besoin d'un arrosage régulier que ce soit par vous ou par la pluie, le terreau doit être humide au moins 1 jour sur 3.
+  Framboisier : votre framboisier aura besoin d'un arrosage régulier que ce soit par vous ou par la pluie, le terreau doit être humide au moins 1 jour sur 4.
   ),
   step: step2_3
 )
