@@ -1,18 +1,15 @@
 .package-choice-container {
 
-
   form{
     display: flex;
     height: 30rem;
     gap: 130px;
-
   }
 
-
   h2{
-    padding: 0.3em;
+    padding: 0.5em;
     text-align: center;
-    margin-top: 1.5em;
+    margin-top: 2.5em;
     margin-bottom: 0.5em;
     font-weight: bold ;
   }
@@ -64,6 +61,7 @@
       font-size: 16px;
       font-weight: bold;
       margin: 0;
+
     }
 
     }
@@ -76,10 +74,18 @@
       color: #0b4f30;
       align-items: center;
       flex-direction: column;
-      padding: .5rem;
+      padding: .3rem;
       width: fit-content;
       word-wrap: break-word;
       height: -webkit-fill-available;
+
+      h2{
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+        text-align: right;
+
+      }
 
       p{
         font-size: 12px;
@@ -108,6 +114,11 @@
 
     }
 
+  .return-button-packages {
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+  }
     .scroll-container {
       display: flex;
       width: max-content;
@@ -124,4 +135,21 @@
       margin-right: 10px; /* Espacement entre les éléments */
       text-align: center; /* Centrer le texte */
       vertical-align: top; /* Aligner les éléments en haut */
+    }
+
+    .package-choice-bottom-buttons-container{
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction:row;
+      flex-wrap: wrap;
+      justify-content:space-between;
+      background-color: white;
+      box-shadow: 0px -1em 1.5em rgba(255, 255, 255, 1);
+      margin-left: 1rem;
+      margin-right: 1rem;
+
     }
