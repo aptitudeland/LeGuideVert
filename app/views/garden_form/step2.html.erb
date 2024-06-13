@@ -6,18 +6,18 @@
     <%= form_for @garden, data: {turbo: false}, url: step3_garden_form_index_path do |f| %>
       <div class="radio-buttons">
         <div class="content-radio-button">
-          <%= f.radio_button :size, ' Jardinière', id: 'size_jardiniere', class: "radio-button-to-shrink" %>
-          <%= f.label :size, '  Jardinière', for: 'size_jardiniere' %>
+          <%= f.radio_button :size, 'Jardinière', id: 'size_jardiniere', class: "radio-button-to-shrink" %>
+          <%= f.label :size, 'Jardinière', for: 'size_jardiniere' %>
         </div>
 
         <div class="content-radio-button", for='size_bac_potager'>
-          <%= f.radio_button :size, ' Bac potager', id: 'size_bac_potager', class: "radio-button-to-shrink" %>
-          <%= f.label :size, '  Bac potager', for: 'size_bac_potager' %>
+          <%= f.radio_button :size, 'Bac potager', id: 'size_bac_potager', class: "radio-button-to-shrink" %>
+          <%= f.label :size, 'Bac potager', for: 'size_bac_potager' %>
         </div>
 
         <div class="content-radio-button">
-          <%= f.radio_button :size, ' Potager partagé', id: 'size_potager_partage', class: "radio-button-to-shrink" %>
-          <%= f.label :size, '  Potager partagé', for: 'size_potager_partage'  %>
+          <%= f.radio_button :size, 'Potager partagé', id: 'size_potager_partage', class: "radio-button-to-shrink" %>
+          <%= f.label :size, 'Potager partagé', for: 'size_potager_partage'  %>
         </div>
 
       </div>
