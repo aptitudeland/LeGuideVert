@@ -1,4 +1,5 @@
 .btnback {
+  padding: 0; // Because iOS Safari applies a 1em horizontal padding by default to its button elements. test
   display: flex;
   justify-content: center;
   align-items: center;

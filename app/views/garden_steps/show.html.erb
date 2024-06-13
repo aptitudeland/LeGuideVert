@@ -63,7 +63,7 @@
       <% end %>
 
       <%= simple_form_for(@garden_step) do |f| %>
-        <div class="invisible">
+        <div class="d-none">
           <%= f.input :status, input_html: {value: 0}%>
         </div>
         <%= button_tag(type: 'submit', class: "btnback") do %>
@@ -72,7 +72,7 @@
       <% end %>
 
       <%= simple_form_for(@garden_step) do |f| %>
-        <div class="invisible">
+        <div class="d-none">
           <%= f.input :status, input_html: {value: 1}%>
         </div>
           <%= button_tag(type: 'submit', class: "btnback") do %>
