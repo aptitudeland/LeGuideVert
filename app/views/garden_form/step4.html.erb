@@ -1,10 +1,24 @@
-<h1 class="titre-form">Créer un nouveau potager - Étape 4</h1>
-<div class="formulaire-du-potager">
-<%= form_for @garden, data: {turbo: false}, url: garden_form_path(@garden) do |f| %>
-  <%= f.label :Adresse %>
-  <%= f.text_field :address %>
+<div class="create-step-body">
+  <div class="formular-title">
+    <h2>Où êtes-vous ?</h2>
+  </div>
+  <div class="formulaire-du-potager">
+    <%= form_for @garden, data: {turbo: false}, url: garden_form_path(@garden) do |f| %>
+      <%= f.text_field :address, class: 'field-name', placeholder: 'adresse ...' %>
+    <% end %>
+  </div>
+  <p class="description-name">Si nous vous demandons votre localisation, c’est pour pouvoir estimer au mieux le climat de votre tout nouveau potager. </p>
+  <%= image_tag "garden_create/step_4_address.png", class: "image-photo-step4" %>
 
-  <%= f.submit 'Create Garden' %>
-<% end %>
+  <div class="create-step-foot-container">
+    <%= link_to step3_garden_form_index_path do %>
+      <div class="btnback">
+        <i class="fa-solid fa-arrow-left-long"></i>
+      </div>
+    <% end %>
 
+    <%= button_tag :submit, form: "edit_garden_#{@garden.id}", class: "btnback", data: {turbo_method: :patch} do %>
+      <i class="fa-solid fa-check"></i>
+    <% end %>
+  </div>
 </div>

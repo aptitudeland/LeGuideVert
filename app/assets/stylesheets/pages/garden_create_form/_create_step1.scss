@@ -19,9 +19,46 @@
   text-align: center;
 }
 
-.image-photo {
+.field-name {
+  font-style: italic;
+}
+
+.radio-buttons .content-radio-button {
+  display: block;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.radio-buttons .content-radio-button:hover {
+  background-color: #0B4F30;
+  color: white;
+}
+
+.radio-buttons .content-radio-button label {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/*#edit_garden {
+  width: 600px;
+}*/
+
+.image-photo-step1 {
   // height: 200px;
   width: 50%;
+}
+
+.image-photo-step2 {
+  width: 60%;
+}
+
+.image-photo-step3 {
+  width: 70%;
+}
+
+.image-photo-step4 {
+  width: 100%;
 }
 
 .description-name {
