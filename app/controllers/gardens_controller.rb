@@ -71,7 +71,7 @@ class GardensController < ApplicationController
     when 4
       render :step4
     else
-      redirect_to @garden, notice: 'Garden was successfully created.'
+      redirect_to @garden
     end
   end
 
@@ -89,7 +89,7 @@ class GardensController < ApplicationController
     when 4
       render :step4
     else
-      redirect_to @garden, notice: 'Garden was successfully created.'
+      redirect_to @garden
     end
   end
 

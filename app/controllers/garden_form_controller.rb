@@ -32,7 +32,7 @@ class GardenFormController < ApplicationController
     end
 
     if @garden
-      redirect_to packagechoice_path(@garden), notice: 'Garden was successfully created.'
+      redirect_to packagechoice_path(@garden)
     else
       render :step1, notice: "Le jardin a flêtri"
     end
