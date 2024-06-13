@@ -1,4 +1,6 @@
 .package-choice-container {
+  height: 81vh;
+
 
   form{
     display: flex;
@@ -6,12 +8,28 @@
     gap: 130px;
   }
 
+  .picto-haut{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+
+    img{
+      height: 4rem
+    }
+  }
+
+
   h2{
-    padding: 0.5em;
     text-align: center;
-    margin-top: 2.5em;
+    margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: bold ;
+    font-size: xx-large;
+  }
+
+  .h3_shadow{
+    // box-shadow: 0px 1em 1.3em white;
+    // z-index: 1;
   }
 
   h3{
@@ -148,7 +166,7 @@
       flex-wrap: wrap;
       justify-content:space-between;
       background-color: white;
-      box-shadow: 0px -1em 1.5em rgba(255, 255, 255, 1);
+      box-shadow: 0px -1.6em 1.3em white;
       margin-left: 1rem;
       margin-right: 1rem;
 

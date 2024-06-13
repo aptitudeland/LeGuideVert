@@ -1,28 +1,33 @@
 <div class="package-choice-container">
-  <h2>Choix de votre kit potager</h2>
-  <h3>Pour "<%=@garden.name%>", sélectionnez le kit qui vous convient : </h3>
-    <div class="scroll-content">
-      <div class="scroll-container">
-        <div class="package-choice-iteration-container">
-            <%=form_with url: garden_garden_steps_path(@garden), method: "post" do |f| %>
-              <% @packages.each do |package|  %>
-                <div class="item">
-                  <%= f.radio_button 'package_id', package.id, class: "package-choice-radio-button" %>
-                  <%= f.label "package_id_#{package.id}" do %>
-                    <div class= "package-choice-iteration-card">
-                      <%= image_tag("categories/#{package.category.downcase}.jpg")  %>
-                        <div class= "package-choice-iteration-card-infos">
-                          <h2><%= package.category %></h2>
-                          <h3><%= package.name %></h3>
-                          <p><%= package.description %></p>
-                        </div>
-                    </div>
-                </div>
-                  <% end %>
-              <% end %>
+  <div class="picto-haut">
+    <%= image_tag("garden_pictures/planter.png") %>
+  </div>
+    <h2>Choix du kit potager</h2>
+      <div class="h3_shadow">
+        <h3>Pour "<%=@garden.name%>", sélectionnez le kit qui vous convient : </h3>
+      </div>
+      <div class="scroll-content">
+        <div class="scroll-container">
+          <div class="package-choice-iteration-container">
+              <%=form_with url: garden_garden_steps_path(@garden), method: "post" do |f| %>
+                <% @packages.each do |package|  %>
+                  <div class="item">
+                    <%= f.radio_button 'package_id', package.id, class: "package-choice-radio-button" %>
+                    <%= f.label "package_id_#{package.id}" do %>
+                      <div class= "package-choice-iteration-card">
+                        <%= image_tag("categories/#{package.category.downcase}.jpg")  %>
+                          <div class= "package-choice-iteration-card-infos">
+                            <h2><%= package.category %></h2>
+                            <h3><%= package.name %></h3>
+                            <p><%= package.description %></p>
+                          </div>
+                      </div>
+                  </div>
+                    <% end %>
+                <% end %>
+          </div>
         </div>
       </div>
-    </div>
 </div>
 
 <div class="package-choice-bottom-buttons-container">
