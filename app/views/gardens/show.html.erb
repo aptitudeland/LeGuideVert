@@ -1,20 +1,30 @@
 <% content_for :meta_title, "#{@garden.name} - #{DEFAULT_META["meta_product_name"]}" %>
 <% content_for :meta_description, @garden.name %>
 
-<div class="garden-body">
-  <div class="garden-category" >
-    <div class="cover-img-garden" style="background-image: url('<%= cl_image_path(@garden.photo.key) %>');">
-      <div class="garden-name" >
-        <h2><%= @garden.name %></h2>
+<div class="garden-show-main-container">
+
+  <div class="garden-show-banner">
+    
+    <% if @garden.size == "Jardinière" %>
+      <div class="background-image" style="background-image: url('<%= image_path("garden_size/size_1_jardiniere.webp") %>');"></div>
+    <% elsif @garden.size == "Bac potager" %>
+      <div class="background-image" style="background-image: url('<%= image_path("garden_size/size_2_bac.jpeg") %>');"></div>
+    <% elsif @garden.size == "potager partagé" %>
+      <div class="background-image" style="background-image: url('<%= image_path("garden_size/size_3_potager.webp") %>');"></div>
+    <% end %>
+
+    <div class="garden-name">
+      <h2><%= @garden.name %></h2>
     </div>
-  </div>
-     <div class="delete-button-card">
+
+    <div class="delete-button-card">
       <div class="delete-button">
         <%= link_to garden_path(@garden), data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr?"} do %>
           <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
         <% end %>
       </div>
     </div>
+
   </div>
 
   <div class="step">
@@ -25,25 +35,24 @@
             <%= cl_image_tag garden_step.step.photo.key, class: "img-card" %>
           </div>
           <div class="step-card-info">
-            <h5>
-              Étape <%= garden_step.step.order %>
-            </h5>
-            <p>
-              <%= garden_step.step.name %>
-            </p>
+            <h5>Étape <%= garden_step.step.order %></h5>
+            <p><%= garden_step.step.name %></p>
             <div class="status">
               <strong><%= garden_step.status %></strong>
             </div>
+          </div>
+          <div class="step-arrow-container">
+            <i class="fa-solid fa-chevron-right"></i>
           </div>
         </div>
       <% end %>
     <% end %>
   </div>
-    <div class="return-button-container-garden-show">
-      <%= link_to gardens_path do %>
-        <div class="btnback">
-          <i class="fa-solid fa-arrow-left-long"></i>
-        </div>
-      <% end %>
-    </div>
+  <div class="return-button-container-garden-show">
+    <%= link_to gardens_path do %>
+      <div class="btnback">
+        <i class="fa-solid fa-arrow-left-long"></i>
+      </div>
+    <% end %>
+  </div>
 </div>
