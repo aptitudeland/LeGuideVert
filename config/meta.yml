@@ -1,6 +1,6 @@
 # config/meta.yml
 meta_product_name: "MetroVert"
-meta_title: "On se met au vert"
+meta_title: "L'application compagnon pour les débutants du potager"
 meta_description: "L’application incontournable pour les débutants du potager en ville !"
 meta_image: "open-graph-banner.png" # should exist in `app/assets/images/`
 twitter_account: "@metrovert" # required for Twitter Cards
