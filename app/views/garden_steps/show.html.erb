@@ -1,3 +1,6 @@
+<% content_for :meta_title, "#{@step.name} - #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @step.description %>
+
 <div class="garden-steps-main-container">
   <div class="garden_steps_banner">
     <h1><%= @step.name %></h1>

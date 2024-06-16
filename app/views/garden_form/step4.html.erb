@@ -1,6 +1,9 @@
+<% content_for :meta_title, "#{"Etape 4"} - #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, "Où se trouve votre potager ?" %>
+
 <div class="create-step-body">
   <div class="formular-title">
-    <h2>Où êtes-vous ?</h2>
+    <h2>Où se trouve votre potager ?</h2>
   </div>
   <div class="formulaire-du-potager">
     <%= form_for @garden, data: {turbo: false}, url: garden_form_path(@garden) do |f| %>

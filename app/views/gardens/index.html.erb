@@ -1,3 +1,6 @@
+<% content_for :meta_title, "#{"Mes potagers !"} - #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, "Voici la liste de tous vos potagers" %>
+
 <div class="garden-index-main-container">
   <% if @mygardens.empty? %>
     <div class="no-gardens-message">
