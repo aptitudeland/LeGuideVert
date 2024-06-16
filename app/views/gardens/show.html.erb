@@ -1,3 +1,6 @@
+<% content_for :meta_title, "#{@garden.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @garden.name %>
+
 <div class="garden-body">
   <div class="garden-category" >
     <div class="cover-img-garden" style="background-image: url('<%= cl_image_path(@garden.photo.key) %>');">
