@@ -5,18 +5,35 @@
   <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
   <style>
     .error-main-container {
-      ppadding: 3em;
+      padding: 3em;
       color: #0b4f30;
       font-family:"Helvetica", "sans-serif";
       width: 80vw;
-      font-size: 2vw;
+    }
 
+    @media (orientation: landscape) {
       img {
-        width: 50%;
-        height: auto;
+        max-height: 30%;
+        max-width: 30%;
+        /* height: auto; */
+      }
+
+      h1, h2, h3 {
+       font-size: 2vw;
       }
     }
-  </style>
+
+    @media (orientation: portrait) {
+      img {
+        max-width: 80%;
+        height: auto;
+      }
+      h1, h2, h3 {
+      font-size: 6vw;
+      }
+    }
+    
+    </style>
 </head>
 
 <body class="error-main-container">
