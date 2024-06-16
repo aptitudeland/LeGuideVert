@@ -6,9 +6,6 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-
     <%= favicon_link_tag 'favicon.ico'%>
 
     <title><%= meta_title %></title>
@@ -30,8 +27,13 @@
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
 
+    <%# PWA setup %>
+    <%# Prepare app for A2HS %>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%# Loadthe config manifest.json for PWA icons %>
     <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
-
+    <%# render the "_ios_pwa_links.html.erb" partial %>
     <%= render 'shared/ios_pwa_links' %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
