@@ -20,7 +20,7 @@
   <div class="step">
     <% @garden_steps.each do |garden_step| %>
       <%= link_to garden_step_path(garden_step) do %>
-        <div class="step-card">
+        <div class="step-card <%= 'step-card-completed' if garden_step.status == '🎉 Etape terminée !' %>">
           <div class="step-image">
             <%= cl_image_tag garden_step.step.photo.key, class: "img-card" %>
           </div>
