@@ -9,11 +9,27 @@
       color: #0b4f30;
       font-family:"Helvetica", "sans-serif";
       width: 80vw;
-      font-size: 2vw;
+    }
 
+    @media (orientation: landscape) {
       img {
-        width: 50%;
+        max-height: 30%;
+        max-width: 30%;
+        /* height: auto; */
+      }
+
+      h1, h2, h3 {
+       font-size: 2vw;
+      }
+    }
+
+    @media (orientation: portrait) {
+      img {
+        max-width: 80%;
         height: auto;
+      }
+      h1, h2, h3 {
+      font-size: 6vw;
       }
     }
   </style>
